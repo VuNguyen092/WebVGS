@@ -325,7 +325,7 @@ section {
   font-weight: lighter;
   font-style: normal;
   font-size: 16rem;
-  color: #FFFFFF;
+  color: #181818fd;
 }
 .section2 .email-us form input.email,
 .section2 .email-us form input.phone {
@@ -356,6 +356,11 @@ section {
   width: 727rem;
   height: 190rem;
   border-radius: 12px;
+  font-family: 'roboto';
+  font-weight: lighter;
+  font-style: normal;
+  font-size: 16rem;
+  color: #181818fd;
 }
 .section2 .email-us form textarea.text {
   position: relative;
