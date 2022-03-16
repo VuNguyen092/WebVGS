@@ -67,7 +67,7 @@ section {
 .navbar .menu li.curr::before {
   position: absolute;
   content: "";
-  background: url(../assets/underline-nav.png) no-repeat;
+  background: url(assets/underline-nav.png) no-repeat;
   background-size: 100%;
   width: 80%;
   height: 28px;
@@ -77,7 +77,7 @@ section {
 .navbar .menu li.drop::before {
   position: absolute;
   content: "";
-  background: url(../assets/Line-2-nav.png) no-repeat;
+  background: url(assets/Line-2-nav.png) no-repeat;
   background-size: 100%;
   width: 100%;
   height: 2px;
@@ -109,7 +109,7 @@ section {
   opacity: 1;
 }
 .section2 {
-  background: url(../assets/bg-sec1.png) no-repeat;
+  background: url(assets/bg-sec1.png) no-repeat;
   background-size: cover;
   height: 984rem;
 }
@@ -135,7 +135,7 @@ section {
   color: #fff;
 }
 .section2 .content .more-btn {
-  background: url(../assets/btn-sec1.png) no-repeat;
+  background: url(assets/btn-sec1.png) no-repeat;
   background-size: 100%;
   position: absolute;
   width: 281px;
@@ -155,7 +155,7 @@ section {
   text-decoration: none;
 }
 .section3 {
-  background: url(../assets/bg-sec2.png) no-repeat;
+  background: url(assets/bg-sec2.png) no-repeat;
   background-size: cover;
   height: 694rem;
   top: 900rem;
@@ -201,7 +201,7 @@ section {
   height: 239rem;
 }
 .section4 {
-  background: url(../assets/bg-sec3.png) no-repeat;
+  background: url(assets/bg-sec3.png) no-repeat;
   background-size: cover;
   height: 1485rem;
   top: 1594rem;
@@ -246,7 +246,7 @@ section {
   margin-left: 620rem;
 }
 .section4 .images .i-right .info {
-  background: url(../assets/bg-info-sec3.png) no-repeat;
+  background: url(assets/bg-info-sec3.png) no-repeat;
   background-size: 100%;
   width: 597rem;
   height: 170rem;
@@ -308,7 +308,7 @@ section {
   width: 380rem;
 }
 .section4 .service-list .info {
-  background: url(../assets/bg-info2-sec3.png) no-repeat;
+  background: url(assets/bg-info2-sec3.png) no-repeat;
   background-size: 100%;
   width: 210rem;
   height: 210rem;
@@ -389,7 +389,7 @@ section {
   margin-left: 50rem;
 }
 .section5 {
-  background: url(../assets/bg-sec4.png) no-repeat;
+  background: url(assets/bg-sec4.png) no-repeat;
   background-size: 100%;
   height: 602rem;
   top: 2965rem;
@@ -426,7 +426,7 @@ section {
   width: 400rem;
 }
 .section6 {
-  background: url(../assets/bg-sec5.png) no-repeat;
+  background: url(assets/bg-sec5.png) no-repeat;
   background-size: 100%;
   height: 1232rem;
   top: 3562rem;
@@ -471,7 +471,7 @@ section {
   display: flex;
   top: -30rem;
   left: 150rem;
-  background: url(../assets/btn-info-sec5.png) no-repeat;
+  background: url(assets/btn-info-sec5.png) no-repeat;
   background-size: 100%;
   width: 176rem;
   height: 34rem;
@@ -498,7 +498,7 @@ section {
   display: flex;
   top: 100rem;
   left: 808rem;
-  background: url(../assets/btn-sec5.png) no-repeat;
+  background: url(assets/btn-sec5.png) no-repeat;
   background-size: 100%;
   width: 250rem;
   height: 50rem;
@@ -521,7 +521,7 @@ section {
   margin-top: -1270rem;
 }
 .section7 {
-  background: url(../assets/bg-sec6.png) no-repeat;
+  background: url(assets/bg-sec6.png) no-repeat;
   background-size: 100%;
   height: 787rem;
   top: 4722rem;
@@ -582,7 +582,7 @@ section {
   font-size: 24rem;
 }
 .section8 {
-  background: url(../assets/bgsec8.png) top center no-repeat;
+  background: url(assets/bgsec8.png) top center no-repeat;
   background-size: 100%;
   height: 692rem;
   top: 5500rem;
@@ -670,7 +670,7 @@ section {
   height: 343rem;
 }
 .section9 {
-  background: url(../assets/bg-sec8.png) top center no-repeat;
+  background: url(assets/bg-sec8.png) top center no-repeat;
   background-size: 100%;
   height: 334rem;
   top: 6185rem;
@@ -700,7 +700,7 @@ section {
   display: flex;
   top: 80rem;
   left: 120rem;
-  background: url(../assets/bg-input-sec8.png) no-repeat;
+  background: url(assets/bg-input-sec8.png) no-repeat;
   background-size: 100%;
   width: 273rem;
   height: 39rem;
@@ -723,7 +723,7 @@ section {
   display: flex;
   top: 110rem;
   left: 120rem;
-  background: url(../assets/btn-sec8.png) no-repeat;
+  background: url(assets/btn-sec8.png) no-repeat;
   background-size: 100%;
   width: 273rem;
   height: 39rem;
