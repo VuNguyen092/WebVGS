@@ -1,0 +1,469 @@
+a {
+  text-decoration: none;
+}
+body {
+  width: 100%;
+  position: relative;
+  overflow-y: auto;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+section {
+  position: absolute;
+  width: 100%;
+  overflow: hidden;
+}
+.section_head {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 75rem;
+  background: #050505;
+  z-index: 10;
+}
+.navbar {
+  position: relative;
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+  align-items: center;
+}
+.navbar .logo {
+  position: relative;
+  left: 180rem;
+  width: 20%;
+  height: 75rem;
+  text-align: center;
+  float: left;
+  line-height: 0;
+}
+.navbar .logo img {
+  width: 276rem;
+}
+.navbar .menu {
+  position: relative;
+  display: flex;
+  top: 0;
+  width: 80%;
+}
+.navbar .menu li {
+  position: relative;
+  font-family: 'roboto';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 16rem;
+  padding: 0 13rem;
+  cursor: pointer;
+  list-style-type: none;
+  left: 300rem;
+}
+.navbar .menu li:nth-of-type(7) {
+  left: 480rem;
+}
+.navbar .menu li a {
+  color: #fff;
+  text-decoration: none;
+}
+.navbar .menu li.curr::before {
+  position: absolute;
+  content: "";
+  background: url(/assets/underline-nav.png) no-repeat;
+  background-size: 100%;
+  width: 80%;
+  height: 28px;
+  top: 78%;
+  z-index: 20;
+}
+.navbar .menu li.drop::before {
+  position: absolute;
+  content: "";
+  background: url(/assets/Line-2-nav.png) no-repeat;
+  background-size: 100%;
+  width: 100%;
+  height: 2px;
+  top: 135%;
+}
+.navbar .menu li.drop img {
+  position: absolute;
+  top: -3rem;
+  left: 80rem;
+}
+.navbar .menu .sub-menu {
+  /* height: 20rem; */
+  position: absolute;
+  top: 150%;
+  left: 15%;
+  width: 100rem;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s, visibility 0.3s;
+  -webkit-transition: opacity 0.3s, visibility 0.3s;
+  -moz-transition: opacity 0.3s, visibility 0.3s;
+  -o-transition: opacity 0.3s, visibility 0.3s;
+  padding: 0.25rem;
+}
+.navbar .menu .drop:hover .sub-menu,
+.navbar .menu .sub-menu:hover {
+  height: auto;
+  visibility: visible;
+  opacity: 1;
+}
+.section1 {
+  position: relative;
+  height: 399rem;
+}
+.section2 {
+  position: relative;
+  background: #181818fd;
+  height: 1500rem;
+}
+.section2 .content-up {
+  position: relative;
+  top: 80rem;
+  left: 383rem;
+}
+.section2 .content-up .title-up {
+  font-family: 'roboto';
+  font-weight: bold;
+  font-style: normal;
+  font-size: 48rem;
+  color: #FFFFFF;
+  width: 500rem;
+}
+.section2 .contact {
+  position: relative;
+  background: url(/assets/contact/bg-info.png) top center no-repeat;
+  background-size: 100%;
+  width: 330rem;
+  height: 330rem;
+}
+.section2 .contact img {
+  position: relative;
+  top: 50rem;
+  left: 110rem;
+  width: 109rem;
+  height: 109rem;
+}
+.section2 .contact .title {
+  position: relative;
+  top: 70rem;
+  left: 110rem;
+  font-family: 'roboto';
+  font-weight: bold;
+  font-style: normal;
+  font-size: 16rem;
+  color: #FFFFFF;
+  width: 300rem;
+}
+.section2 .contact .text {
+  position: relative;
+  top: 80rem;
+  left: 80rem;
+  text-align: center;
+  font-family: 'roboto';
+  font-weight: lighter;
+  font-style: normal;
+  font-size: 16rem;
+  color: #FFFFFF;
+  width: 200rem;
+}
+.section2 .contact1 {
+  position: relative;
+  top: 120rem;
+  left: 425rem;
+}
+.section2 .contact1 .text {
+  width: 180rem;
+}
+.section2 .contact2 {
+  position: relative;
+  top: -210rem;
+  left: 795rem;
+}
+.section2 .contact2 .title {
+  left: 95rem;
+}
+.section2 .contact2 .text {
+  left: 68rem;
+}
+.section2 .contact3 {
+  position: relative;
+  top: -540rem;
+  left: 1165rem;
+}
+.section2 .info {
+  position: relative;
+  top: -400rem;
+  left: 600rem;
+  display: block;
+}
+.section2 .info .title-main {
+  position: relative;
+  top: -50rem;
+  left: 220rem;
+  font-family: 'roboto';
+  font-weight: bold;
+  font-style: normal;
+  font-size: 48rem;
+  color: #FFFFFF;
+  width: 500rem;
+}
+.section2 .info .title {
+  font-family: 'roboto';
+  font-weight: bold;
+  font-style: normal;
+  font-size: 16rem;
+  color: #FFFFFF;
+  width: 300rem;
+}
+.section2 .info .text {
+  font-family: 'roboto';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 16rem;
+  color: #FFFFFF;
+  width: 300rem;
+}
+.section2 .info .phone {
+  position: relative;
+  top: 0;
+  left: 25rem;
+}
+.section2 .info .phone img {
+  position: relative;
+  top: 20rem;
+  left: -25rem;
+}
+.section2 .info .telephone {
+  position: relative;
+  top: 0;
+  left: 25rem;
+}
+.section2 .info .telephone img {
+  position: relative;
+  top: 20rem;
+  left: -25rem;
+}
+.section2 .info .mail {
+  position: relative;
+  top: 0;
+  left: 25rem;
+}
+.section2 .info .mail img {
+  position: relative;
+  top: 23rem;
+  left: -25rem;
+}
+.section2 .info img {
+  position: relative;
+  top: -170rem;
+  left: 220rem;
+}
+.section2 .email-us {
+  position: relative;
+  top: -450rem;
+  left: 500rem;
+  display: none;
+}
+.section2 .email-us .title-main {
+  position: relative;
+  top: 0;
+  left: 250rem;
+  font-family: 'roboto';
+  font-weight: bold;
+  font-style: normal;
+  font-size: 48rem;
+  color: #FFFFFF;
+  width: 500rem;
+}
+.section2 .email-us form label {
+  position: relative;
+  top: 0;
+  left: 0;
+  font-family: 'roboto';
+  font-weight: bold;
+  font-style: normal;
+  font-size: 16rem;
+  color: #FFFFFF;
+  width: 500rem;
+}
+.section2 .email-us form label.name {
+  position: relative;
+  top: 50rem;
+  left: 85rem;
+}
+.section2 .email-us form label.email {
+  position: relative;
+  top: 80rem;
+  left: 85rem;
+}
+.section2 .email-us form label.phone {
+  position: relative;
+  top: -15rem;
+  left: 455rem;
+}
+.section2 .email-us form label.title {
+  position: relative;
+  top: 10rem;
+  left: 85rem;
+}
+.section2 .email-us form label.text {
+  position: relative;
+  top: 40rem;
+  left: 85rem;
+}
+.section2 .email-us form input {
+  display: block;
+  width: 727rem;
+  box-shadow: none;
+  outline: none !important;
+  height: 50rem;
+  padding: 0 20rem;
+  margin-bottom: 19rem;
+  border-radius: 12px;
+  font-family: 'roboto';
+  font-weight: lighter;
+  font-style: normal;
+  font-size: 16rem;
+  color: #FFFFFF;
+}
+.section2 .email-us form input.email,
+.section2 .email-us form input.phone {
+  width: 360rem;
+}
+.section2 .email-us form input.phone {
+  position: relative;
+  top: -8rem;
+  left: 450rem;
+}
+.section2 .email-us form input.name {
+  position: relative;
+  top: 56rem;
+  left: 85rem;
+}
+.section2 .email-us form input.email {
+  position: relative;
+  top: 86rem;
+  left: 85rem;
+}
+.section2 .email-us form input.title {
+  position: relative;
+  top: 15rem;
+  left: 85rem;
+}
+.section2 .email-us form textarea {
+  display: block;
+  width: 727rem;
+  height: 190rem;
+  border-radius: 12px;
+}
+.section2 .email-us form textarea.text {
+  position: relative;
+  top: 50rem;
+  left: 85rem;
+}
+.section2 .email-us form .btn {
+  position: relative;
+  top: 90rem;
+  left: 300rem;
+  display: block;
+  background: url(/assets/contact/bg-btn.png) top center no-repeat;
+  background-size: 100%;
+  width: 250rem;
+  height: 50rem;
+}
+.section2 .email-us form .btn a {
+  position: relative;
+  top: 8rem;
+  left: 0;
+  display: block;
+  font-family: 'roboto';
+  font-weight: bold;
+  font-style: normal;
+  font-size: 24rem;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+.section9 {
+  position: relative;
+  background: url(/assets/bg-sec8.png) top center no-repeat;
+  background-size: 100%;
+  height: 334rem;
+  z-index: 1;
+}
+.section9 .container {
+  position: relative;
+  width: 60%;
+  margin: 0 auto 0;
+}
+.section9 .container .row .col .content-inner {
+  position: relative;
+  display: block;
+  top: 80rem;
+  left: 120rem;
+}
+.section9 .container .row .col .content-inner p {
+  font-family: 'roboto';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 16rem;
+  color: #FFFFFF;
+  width: 300rem;
+}
+.section9 .container .row .col .email {
+  position: relative;
+  display: flex;
+  top: 80rem;
+  left: 120rem;
+  background: url(/assets/bg-input-sec8.png) no-repeat;
+  background-size: 100%;
+  width: 273rem;
+  height: 39rem;
+}
+.section9 .container .row .col .email a {
+  position: relative;
+  display: flex;
+  align-items: center;
+  left: 10%;
+  text-decoration: none;
+  font-family: 'roboto';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 16rem;
+  color: #000000;
+  width: 200rem;
+}
+.section9 .container .row .col .sign {
+  position: relative;
+  display: flex;
+  top: 110rem;
+  left: 120rem;
+  background: url(/assets/btn-sec8.png) no-repeat;
+  background-size: 100%;
+  width: 273rem;
+  height: 39rem;
+}
+.section9 .container .row .col .sign a {
+  position: relative;
+  display: flex;
+  align-items: center;
+  left: 35%;
+  text-decoration: none;
+  font-family: 'roboto';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 16rem;
+  color: #FFFFFF;
+  width: 200rem;
+}
+.section9 .copy-right {
+  position: relative;
+  top: 166rem;
+  left: 360rem;
+  font-family: 'roboto';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 16rem;
+  color: #FFFFFF;
+  width: 500rem;
+}
