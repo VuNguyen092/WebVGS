@@ -67,7 +67,7 @@ section {
 .navbar .menu li.curr::before {
   position: absolute;
   content: "";
-  background: url(/assets/underline-nav.png) no-repeat;
+  background: url(../assets/underline-nav.png) no-repeat;
   background-size: 100%;
   width: 80%;
   height: 28px;
@@ -77,7 +77,7 @@ section {
 .navbar .menu li.drop::before {
   position: absolute;
   content: "";
-  background: url(/assets/Line-2-nav.png) no-repeat;
+  background: url(../assets/Line-2-nav.png) no-repeat;
   background-size: 100%;
   width: 100%;
   height: 2px;
@@ -126,7 +126,7 @@ section {
 }
 .section2 .container .row .col {
   position: relative;
-  background: url(/assets/game/card.png) top center no-repeat;
+  background: url(../assets/game/card.png) top center no-repeat;
   background-size: 100%;
   width: 377rem;
   height: 379rem;
@@ -203,7 +203,7 @@ section {
   display: flex;
   top: 80rem;
   left: 120rem;
-  background: url(/assets/bg-input-sec8.png) no-repeat;
+  background: url(../assets/bg-input-sec8.png) no-repeat;
   background-size: 100%;
   width: 273rem;
   height: 39rem;
@@ -226,7 +226,7 @@ section {
   display: flex;
   top: 110rem;
   left: 120rem;
-  background: url(/assets/btn-sec8.png) no-repeat;
+  background: url(../assets/btn-sec8.png) no-repeat;
   background-size: 100%;
   width: 273rem;
   height: 39rem;
