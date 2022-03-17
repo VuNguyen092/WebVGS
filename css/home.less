@@ -11,14 +11,13 @@ body {
   }
 
 section{
-    position: absolute;
+    position: relative;
     width: 100%;
     overflow: hidden;
 }
 
 .section_head{
     position: fixed;
-    top: 0;
     width: 100%;
     height: 75rem;
     background: rgb(5, 5, 5);
@@ -64,6 +63,7 @@ section{
     cursor: pointer;
     list-style-type: none;
     left: 300rem;
+    z-index: 12;
   }
 
   .navbar .menu li:nth-of-type(7){
@@ -82,8 +82,8 @@ section{
     background-size: 100%;
     width: 80%;
     height: 28px;
-    top: 81%;
-    z-index: 20;
+    top: 76%;
+    z-index: -1;
   }
 
   .navbar .menu li.drop::before{
@@ -125,9 +125,10 @@ section{
   }
 
 .section2{
+    position: relative;
     background: url(../assets/bg-sec1.png) no-repeat;
-    background-size: cover;
-    height: 984rem;
+    background-size: 100%;
+    height: 899rem;
 }  
 
 .section2 .content{
@@ -179,191 +180,243 @@ section{
 }
 
 .section3{
+  position: relative;
   background: url(../assets/bg-sec2.png) no-repeat;
   background-size: cover;
   height: 694rem;
-  top: 900rem;
+  // top: 900rem;
   overflow: visible;
+
+  .content-wrap{
+    display: flex;
+    flex-direction: row;
+    padding-top: 61rem;
+    padding-left: 207rem;
+    column-gap: 312rem;
+
+    .content{
+      position: relative;
+      display: flex;
+      width: 400rem;
+      flex-direction: column;
+      row-gap: 20rem;
+      padding-top: 149rem;
+
+      .title{
+        position: relative;
+        // left: 211rem;
+        // top: 204rem;
+        font-family: 'roboto';
+        font-weight: bold;
+        font-style: normal;
+        font-size: 50rem;
+        color: #fff;
+      }
+
+      .text{
+        position: relative;
+        // left: 211rem;
+        // top: 204rem;
+        font-family: 'roboto';
+        font-weight: normal;
+        font-style: normal;
+        font-size: 24rem;
+        color: #fff;
+        width: 600rem;
+      }
+    }
+
+    img{
+      position: relative;
+      width: 921rem;
+      height: 520rem;
+      // top: -80rem;
+      // left: 900rem;
+    }
+  }
+
+  .cube{
+    position: relative;
+    margin-top: -663rem;
+    margin-left: 129rem;
+    
+    img{
+      width: 233rem;
+      height: 239rem;
+    }
+  } 
 }  
-
-.section3 .content{
-  position: relative;
-  display: block;
-  width: 400rem;
-}
-
-.section3 .content .title p{
-  position: relative;
-  left: 211rem;
-  top: 204rem;
-  font-family: 'roboto';
-  font-weight: bold;
-  font-style: normal;
-  font-size: 50rem;
-  color: #fff;
-}
-
-.section3 .content .text p{
-  position: relative;
-  left: 211rem;
-  top: 204rem;
-  font-family: 'roboto';
-  font-weight: normal;
-  font-style: normal;
-  font-size: 18rem;
-  color: #fff;
-}
-
-.section3 img{
-  position: relative;
-  width: 921rem;
-  height: 520rem;
-  top: -80rem;
-  left: 900rem;
-}
-
-.section3 .cube img{
-  display: block;
-  margin-top: -680rem;
-  margin-left: -800rem;
-  width: 233rem;
-  height: 239rem;
-} 
 
 .section4{
+  position: relative;
   background: url(../assets/bg-sec3.png) no-repeat;
   background-size: cover;
-  height: 1485rem;
-  top: 1594rem;
+  height: 1372rem;
   overflow: visible;
+
+  .wrapper{
+    display: flex;
+    flex-direction: column;
+    width: 66%;
+    margin: 0 auto;
+
+    .content{
+      display: flex;
+      flex-direction: column;
+      gap: 5rem;
+      // margin-left: 360rem;
+
+      .title{
+        font-family: 'roboto';
+        font-weight: bold;
+        font-style: normal;
+        font-size: 50rem;
+        color: #fff;
+      }
+
+      .text{
+        font-family: 'roboto';
+        font-weight: normal;
+        font-style: normal;
+        font-size: 18rem;
+        color: #fff;
+        width: 700rem;
+      }
+    }
+
+    .images{
+      display: flex;
+      flex-direction: row;
+      gap: 25rem;
+      // width: 63%;
+      // margin: 65rem auto 0;
+
+      .i-left{
+        position: relative;
+        // width: 592rem;
+        // height: 365rem;
+      }
+
+      .i-right{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        row-gap: 27rem;
+
+        .info{
+          background: url(../assets/bg-info-sec3.png) no-repeat;
+          background-size: 100%;
+          width: 588rem;
+          height: 170rem;
+          // width: 688rem;
+          // height: 210rem;
+          display: flex;
+          flex-direction: row;
+          // column-gap: 20rem;
+
+          img{
+            width: 161rem;
+            height: 170rem;
+            position: relative;
+            left: -1rem;
+          }
+
+          .text-wrapper{
+            .text{
+              font-family: 'roboto';
+              font-weight: normal;
+              font-style: normal;
+              font-size: 16rem;
+              color: #515151;
+            }
+  
+            .title{
+              font-family: 'roboto';
+              font-weight: bold;
+              font-style: normal;
+              font-size: 36rem;
+              color: #515151;
+            }
+          }
+          
+        }
+      }
+    }
+  }
 }  
 
-.section4 .content{
-  display: block;
-  gap: 5rem;
-  margin-top: 65rem;
-  margin-left: 360rem;
-}
+// .section4 .images .i-right .info{
+//   background: url(../assets/bg-info-sec3.png) no-repeat;
+//   background-size: 100%;
+//   width: 597rem;
+//   height: 170rem;
+// }
 
-.section4 .content .title p{
-  font-family: 'roboto';
-  font-weight: bold;
-  font-style: normal;
-  font-size: 50rem;
-  color: #fff;
-}
+// .section4 .images .i-right .info p.text{
+//   font-family: 'roboto';
+//   font-weight: normal;
+//   font-style: normal;
+//   font-size: 18rem;
+//   color: #515151;
+// }
 
-.section4 .content .text p{
-  position: relative;
-  top: 0rem;
-  font-family: 'roboto';
-  font-weight: normal;
-  font-style: normal;
-  font-size: 18rem;
-  color: #fff;
-  width: 700rem;
-}
+// .section4 .images .i-right .info p.title{
+//   font-family: 'roboto';
+//   font-weight: bold;
+//   font-style: normal;
+//   font-size: 40rem;
+//   color: #515151;
+// }
 
-.section4 .images{
-  display: block;
-  gap: 5rem;
-  // margin-top: 65rem;
-  // margin-left: 360rem;
-  width: 63%;
-  margin: 65rem auto 0;
-  // position: relative;
-  // width: 100%;
-  // left: 360rem;
-  // top: -10rem;
-}
+// .section4 .images .i-right .info1{
+//   position: relative;
+//   top: 0rem;
+//   left: 0rem;
+// }
 
-.section4 .images .i-left img{
-  position: relative;
-  // width: 592rem;
-  // height: 365rem;
-}
+// .section4 .images .i-right .info1 img{
+//   position: absolute;
+//   top: 0rem;
+//   left: -7rem;
+// }
 
-.section4 .images .i-right{
-  position: relative;
-  display: block;
-  margin-top: -375rem;
-  margin-left: 620rem;
-  // top: -375rem;
-  // left: 620rem;
-}
+// .section4 .images .i-right .info1 p.title{
+//   position: absolute;
+//   top: 0rem;
+//   left: 160rem;
+// }
 
-.section4 .images .i-right .info{
-  background: url(../assets/bg-info-sec3.png) no-repeat;
-  background-size: 100%;
-  width: 597rem;
-  height: 170rem;
-}
+// .section4 .images .i-right .info1 p.text{
+//   position: absolute;
+//   top: 60rem;
+//   left: 170rem;
+//   width: 380rem;
+// }
 
-.section4 .images .i-right .info p.text{
-  font-family: 'roboto';
-  font-weight: normal;
-  font-style: normal;
-  font-size: 18rem;
-  color: #515151;
-}
+// .section4 .images .i-right .info2{
+//   position: relative;
+//   top: 30rem;
+//   left: 0rem;
+// }
 
-.section4 .images .i-right .info p.title{
-  font-family: 'roboto';
-  font-weight: bold;
-  font-style: normal;
-  font-size: 40rem;
-  color: #515151;
-}
+// .section4 .images .i-right .info2 img{
+//   position: absolute;
+//   top: 0rem;
+//   left: -7rem;
+// }
 
-.section4 .images .i-right .info1{
-  position: relative;
-  top: 0rem;
-  left: 0rem;
-}
+// .section4 .images .i-right .info2 p.title{
+//   position: absolute;
+//   top: 0rem;
+//   left: 160rem;
+// }
 
-.section4 .images .i-right .info1 img{
-  position: absolute;
-  top: 0rem;
-  left: -7rem;
-}
-
-.section4 .images .i-right .info1 p.title{
-  position: absolute;
-  top: 0rem;
-  left: 160rem;
-}
-
-.section4 .images .i-right .info1 p.text{
-  position: absolute;
-  top: 60rem;
-  left: 170rem;
-  width: 380rem;
-}
-
-.section4 .images .i-right .info2{
-  position: relative;
-  top: 30rem;
-  left: 0rem;
-}
-
-.section4 .images .i-right .info2 img{
-  position: absolute;
-  top: 0rem;
-  left: -7rem;
-}
-
-.section4 .images .i-right .info2 p.title{
-  position: absolute;
-  top: 0rem;
-  left: 160rem;
-}
-
-.section4 .images .i-right .info2 p.text{
-  position: absolute;
-  top: 60rem;
-  left: 170rem;
-  width: 380rem;
-}
+// .section4 .images .i-right .info2 p.text{
+//   position: absolute;
+//   top: 60rem;
+//   left: 170rem;
+//   width: 380rem;
+// }
 
 .section4{
   .service-list{
@@ -463,10 +516,11 @@ section{
 }
 
 .section5{
+  position: relative;
   background: url(../assets/bg-sec4.png) no-repeat;
   background-size: 100%;
   height: 602rem;
-  top: 2965rem;
+  // top: 2965rem;
   
   .road{
     position: relative;
@@ -509,7 +563,7 @@ section{
   background: url(../assets/bg-sec5.png) no-repeat;
   background-size: 100%;
   height: 1232rem;
-  top: 3562rem;
+  // top: 3562rem;
   overflow: visible;
 
   .title{
@@ -517,7 +571,7 @@ section{
     display: block;
     // top: 80rem;
     // left: 360rem;
-    margin-top: 80rem;
+    // margin-top: 80rem;
     margin-left: 360rem;
     font-family: 'roboto';
     font-weight: bold;
@@ -620,8 +674,9 @@ section{
 .section7{
   background: url(../assets/bg-sec6.png) no-repeat;
   background-size: 100%;
-  height: 787rem;
-  top: 4722rem;
+  height: 866rem;
+  margin-top: -62rem;
+  // top: 4722rem;
 
   .content{
     position: relative;
@@ -696,19 +751,19 @@ section{
   background: url(../assets/bgsec8.png) top center no-repeat;
   background-size: 100%;
   height: 692rem;
-  top: 5500rem;
   overflow: visible;
-  // z-index: -1;
+  margin-top: -80rem;
+
 
   .texts{
-    margin-top: 80rem;
-    margin-left: 388rem;
+    padding-top: 80rem;
+    padding-left: 388rem;
     font-family: 'roboto';
     font-weight: bold;
     font-style: normal;
     font-size: 50rem;
     color: #FFFFFF;
-    width: 500rem;
+    width: 751rem;
   }
   
   .slide-cont{
@@ -803,7 +858,7 @@ section{
   background: url(../assets/bg-sec8.png) top center no-repeat;
   background-size: 100%;
   height: 334rem;
-  top: 6185rem;
+  // top: 6185rem;
   z-index: 1;
 
   .container{
