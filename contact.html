@@ -124,7 +124,7 @@
                 </div>
                 <div class="col">
                     <div class="email">
-                        <a href="#">Email của bạn</a>
+                        <input type="email" name="email" class="email" placeholder="Email của bạn" required>
                     </div>
                     <div class="sign">
                         <a href="#">Đăng Ký</a>
@@ -139,6 +139,17 @@
 
     <script src="./Script/jquery.min.js"></script>
     <script>
+        $(document).on("mouseover", ".menu li", (e) => {
+            let isShow = $(e.currentTarget).hasClass("curr");
+            if (!isShow) $(e.currentTarget).addClass("curr");
+            else $(e.currentTarget).removeClass("curr");
+        });
+
+        $(document).on("mouseout", ".menu li", (e) => {
+            $(e.currentTarget).removeClass("curr");
+        });
+    </script>
+    <script>
         $(document).on("click", ".contact1", (e) =>{
             // $(".road").removeClass("show");
             const note = document.querySelector('.email-us');
@@ -146,6 +157,9 @@
 
             const note1 = document.querySelector('.info');
             note1.style.cssText = 'display: block';
+
+            const note2 = document.querySelector('.section2');
+            note2.style.cssText = 'height: 1000rem';
         });
 
         $(document).on("click", ".contact2", (e) =>{
@@ -154,6 +168,9 @@
 
             const note1 = document.querySelector('.email-us');
             note1.style.cssText = 'display: block';
+
+            const note2 = document.querySelector('.section2');
+            note2.style.cssText = 'height: 1500rem';
         });
     </script>
     

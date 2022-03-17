@@ -71,7 +71,7 @@ section {
   background-size: 100%;
   width: 80%;
   height: 28px;
-  top: 78%;
+  top: 84%;
   z-index: 20;
 }
 .navbar .menu li.drop::before {
@@ -119,6 +119,7 @@ section {
 }
 .section1 .slideshow-container .mySlides {
   display: none;
+  cursor: pointer;
 }
 .section1 .slideshow-container .mySlides .content {
   position: relative;
@@ -167,6 +168,9 @@ section {
   position: relative;
   width: 62%;
   margin: 100rem auto 0;
+}
+.section2 .container .row .col {
+  cursor: pointer;
 }
 .section2 .container .row .col .content .title {
   margin: 0 0;
@@ -245,25 +249,32 @@ section {
 .section9 .container .row .col .email {
   position: relative;
   display: flex;
-  top: 80rem;
-  left: 120rem;
-  background: url(../assets/bg-input-sec8.png) no-repeat;
-  background-size: 100%;
-  width: 273rem;
-  height: 39rem;
+  top: 42rem;
+  left: 57rem;
+  border-radius: 25px;
 }
-.section9 .container .row .col .email a {
+.section9 .container .row .col .email input {
   position: relative;
   display: flex;
+  width: 273rem;
+  height: 40rem;
   align-items: center;
-  left: 10%;
-  text-decoration: none;
+  padding: 0 20rem;
+  box-shadow: none;
+  outline: none !important;
   font-family: 'roboto';
   font-weight: normal;
   font-style: normal;
   font-size: 16rem;
   color: #000000;
-  width: 200rem;
+}
+.section9 .container .row .col .email input::placeholder {
+  position: relative;
+  font-family: 'roboto';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 16rem;
+  color: #000000;
 }
 .section9 .container .row .col .sign {
   position: relative;

@@ -201,7 +201,7 @@
                 </div>
                 <div class="col">
                     <div class="email">
-                        <a href="#">Email của bạn</a>
+                        <input type="email" name="email" class="email" placeholder="Email của bạn" required>
                     </div>
                     <div class="sign">
                         <a href="#">Đăng Ký</a>
@@ -214,7 +214,18 @@
         </div>
     </section>
 
+    <script src="./Script/jquery.min.js"></script>
+    <script>
+        $(document).on("mouseover", ".menu li", (e) => {
+            let isShow = $(e.currentTarget).hasClass("curr");
+            if (!isShow) $(e.currentTarget).addClass("curr");
+            else $(e.currentTarget).removeClass("curr");
+        });
 
+        $(document).on("mouseout", ".menu li", (e) => {
+            $(e.currentTarget).removeClass("curr");
+        });
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>

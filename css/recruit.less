@@ -82,7 +82,7 @@ a{
       background-size: 100%;
       width: 80%;
       height: 28px;
-      top: 78%;
+      top: 84%;
       z-index: 20;
     }
   
@@ -164,6 +164,7 @@ a{
                 z-index: 1;
                 .icon{
                     position: relative;
+                    cursor: pointer;
                 }
 
                 .content-inner{
@@ -178,6 +179,7 @@ a{
                       font-size: 24rem;
                       color: #FFFFFF;
                       width: 300rem;
+                      cursor: pointer;
                     }
 
                     .text{
@@ -265,6 +267,7 @@ a{
             height: 65rem;
             top: -240rem;
             left: 500rem;
+            cursor: pointer;
 
             a{
               position: relative;
@@ -349,25 +352,33 @@ a{
           .email{
             position: relative;
             display: flex;
-            top: 80rem;
-            left: 120rem;
-            background: url(../assets/bg-input-sec8.png) no-repeat;
-            background-size: 100%;
-            width: 273rem;
-            height: 39rem;
+            top: 42rem;
+            left: 57rem;
+            border-radius: 25px;
   
-            a{
+            input{
               position: relative;
               display: flex;
+              width: 273rem;
+              height: 40rem;
               align-items: center;
-              left: 10%;
-              text-decoration: none;
+              padding: 0 20rem;
+              box-shadow: none;
+              outline: none !important;
               font-family: 'roboto';
               font-weight: normal;
               font-style: normal;
               font-size: 16rem;
               color: #000000;
-              width: 200rem;
+            }
+  
+            input::placeholder{
+              position: relative;
+              font-family: 'roboto';
+              font-weight: normal;
+              font-style: normal;
+              font-size: 16rem;
+              color: #000000;
             }
           }
   

@@ -82,7 +82,7 @@ a{
       background-size: 100%;
       width: 80%;
       height: 28px;
-      top: 78%;
+      top: 84%;
       z-index: 20;
     }
   
@@ -132,7 +132,7 @@ a{
 .section2{
     position: relative;
     background: #181818fd;
-    height: 1500rem;
+    height: 1000rem;
 
     .content-up{
         position: relative;
@@ -155,8 +155,7 @@ a{
         background-size: 100%;
         width: 330rem;
         height: 330rem;
-        // top: 50rem;
-        // left: 110rem;
+        cursor: pointer;
 
         img{
             position: relative;
@@ -254,7 +253,7 @@ a{
             font-weight: normal;
             font-style: normal;
             font-size: 16rem;
-            color: #FFFFFF;
+            color: #cfcdcd;
             width: 300rem;
         }
 
@@ -268,6 +267,11 @@ a{
                 top: 20rem;
                 left: -25rem;
             }
+
+            .text:hover{
+                color: #FFFFFF;
+                cursor: pointer;
+            }
         }
 
         .telephone{
@@ -280,6 +284,11 @@ a{
                 top: 20rem;
                 left: -25rem;
             }
+
+            .text:hover{
+                color: #FFFFFF;
+                cursor: pointer;
+            }
         }
 
         .mail{
@@ -291,6 +300,11 @@ a{
                 position: relative;
                 top: 23rem;
                 left: -25rem;
+            }
+
+            .text:hover{
+                color: #FFFFFF;
+                cursor: pointer;
             }
         }
 
@@ -444,10 +458,6 @@ a{
                     top: 8rem;
                     left: 0;
                     display: block;
-                    // background: url(../assets/contact/bg-btn.png) top center no-repeat;
-                    // background-size: 100%;
-                    // width: 250rem;
-                    // height: 50rem;
                     font-family: 'roboto';
                     font-weight: bold;
                     font-style: normal;
@@ -495,25 +505,33 @@ a{
           .email{
             position: relative;
             display: flex;
-            top: 80rem;
-            left: 120rem;
-            background: url(../assets/bg-input-sec8.png) no-repeat;
-            background-size: 100%;
-            width: 273rem;
-            height: 39rem;
+            top: 42rem;
+            left: 57rem;
+            border-radius: 25px;
   
-            a{
+            input{
               position: relative;
               display: flex;
+              width: 273rem;
+              height: 40rem;
               align-items: center;
-              left: 10%;
-              text-decoration: none;
+              padding: 0 20rem;
+              box-shadow: none;
+              outline: none !important;
               font-family: 'roboto';
               font-weight: normal;
               font-style: normal;
               font-size: 16rem;
               color: #000000;
-              width: 200rem;
+            }
+  
+            input::placeholder{
+              position: relative;
+              font-family: 'roboto';
+              font-weight: normal;
+              font-style: normal;
+              font-size: 16rem;
+              color: #000000;
             }
           }
   

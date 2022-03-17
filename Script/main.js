@@ -27,6 +27,10 @@ $(document).on("mouseover", ".menu li", (e) => {
     else $(e.currentTarget).removeClass("curr");
 });
 
+$(document).on("mouseout", ".menu li", (e) => {
+  $(e.currentTarget).removeClass("curr");
+});
+
 var myVar,
   isPause = false,
   slideIndex = 1;
