@@ -29,12 +29,9 @@ section {
 }
 .navbar .logo {
   position: relative;
-  left: 180rem;
-  width: 20%;
+  padding-left: 180rem;
+  width: 38%;
   height: 75rem;
-  text-align: center;
-  float: left;
-  line-height: 0;
 }
 .navbar .logo img {
   width: 276rem;
@@ -43,7 +40,7 @@ section {
   position: relative;
   display: flex;
   top: 0;
-  width: 80%;
+  width: 62%;
 }
 .navbar .menu li {
   position: relative;
@@ -54,11 +51,6 @@ section {
   padding: 0 13rem;
   cursor: pointer;
   list-style-type: none;
-  left: 300rem;
-  z-index: 12;
-}
-.navbar .menu li:nth-of-type(7) {
-  left: 480rem;
 }
 .navbar .menu li a {
   color: #fff;
@@ -88,7 +80,7 @@ section {
   top: -3rem;
   left: 80rem;
 }
-.navbar .menu .sub-menu {
+.navbar .menu li.drop .sub-menu {
   /* height: 20rem; */
   position: absolute;
   top: 150%;
@@ -102,6 +94,9 @@ section {
   -o-transition: opacity 0.3s, visibility 0.3s;
   padding: 0.25rem;
 }
+.navbar .menu li:nth-of-type(7) {
+  margin-left: 180rem;
+}
 .navbar .menu .drop:hover .sub-menu,
 .navbar .menu .sub-menu:hover {
   height: auto;
@@ -114,45 +109,49 @@ section {
   background-size: 100%;
   height: 899rem;
 }
-.section2 .content {
-  display: block;
-  position: relative;
-  width: 500rem;
-  margin-top: 204rem;
-  margin-left: 211rem;
+.section2 .wrap {
+  display: flex;
+  flex-direction: column;
+  padding: 244rem 0 0 236rem;
 }
-.section2 .content .title p {
+.section2 .wrap .content {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 550rem;
+  gap: 40rem;
+}
+.section2 .wrap .content .title {
   font-family: 'roboto';
   font-weight: bold;
   font-style: normal;
   font-size: 50rem;
   color: #fff;
 }
-.section2 .content .text p {
+.section2 .wrap .content .text {
   font-family: 'roboto';
   font-weight: normal;
   font-style: normal;
-  font-size: 18rem;
+  font-size: 16rem;
   color: #fff;
 }
-.section2 .content .more-btn {
+.section2 .wrap .more-btn {
   background: url(../assets/btn-sec1.png) no-repeat;
   background-size: 100%;
   position: absolute;
+  display: flex;
   width: 281px;
   height: 74px;
-  left: 0px;
-  top: 256px;
+  margin-top: 250rem;
 }
-.section2 .content .more-btn a {
+.section2 .wrap .more-btn a {
   position: relative;
   font-family: 'roboto';
   font-weight: bold;
   font-style: normal;
   font-size: 25rem;
   color: #fff;
-  left: 90px;
-  top: 20px;
+  padding: 20rem 0 0 90rem;
   text-decoration: none;
 }
 .section3 {
@@ -218,8 +217,10 @@ section {
 .section4 .wrapper {
   display: flex;
   flex-direction: column;
-  width: 66%;
+  width: 64%;
   margin: 0 auto;
+  padding-top: 50rem;
+  gap: 50rem;
 }
 .section4 .wrapper .content {
   display: flex;
@@ -240,6 +241,21 @@ section {
   font-size: 18rem;
   color: #fff;
   width: 700rem;
+}
+.section4 .wrapper .content .text ul li {
+  list-style-type: none;
+}
+.section4 .wrapper .content .text ul li:nth-of-type(1) {
+  padding-left: 118rem;
+}
+.section4 .wrapper .content .text ul li:nth-of-type(2) {
+  padding-left: 135rem;
+}
+.section4 .wrapper .content .text ul li:nth-of-type(3) {
+  padding-left: 79rem;
+}
+.section4 .wrapper .content .text ul li:nth-of-type(4) {
+  padding-left: 45rem;
 }
 .section4 .wrapper .images {
   display: flex;
@@ -269,6 +285,9 @@ section {
   position: relative;
   left: -1rem;
 }
+.section4 .wrapper .images .i-right .info .text-wrapper {
+  padding-top: 24rem;
+}
 .section4 .wrapper .images .i-right .info .text-wrapper .text {
   font-family: 'roboto';
   font-weight: normal;
@@ -280,70 +299,66 @@ section {
   font-family: 'roboto';
   font-weight: bold;
   font-style: normal;
-  font-size: 36rem;
+  font-size: 26rem;
   color: #515151;
 }
-.section4 .service-list .info {
+.section4 .wrapper .content-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 162rem;
+  padding-left: 120rem;
+  padding-top: 50rem;
+}
+.section4 .wrapper .content-wrapper .service-list {
+  display: flex;
+  flex-direction: column;
+  gap: 30rem;
+}
+.section4 .wrapper .content-wrapper .service-list .row {
+  display: flex;
+  flex-direction: row;
+  gap: 30rem;
+}
+.section4 .wrapper .content-wrapper .service-list .row .info {
   background: url(../assets/bg-info2-sec3.png) no-repeat;
   background-size: 100%;
   width: 210rem;
   height: 210rem;
+  display: flex;
+  flex-direction: column;
+  padding-top: 42rem;
+  align-items: center;
 }
-.section4 .service-list .info .title {
-  position: absolute;
-  top: 40rem;
-  left: 70rem;
+.section4 .wrapper .content-wrapper .service-list .row .info .title {
   font-family: 'roboto';
   font-weight: bold;
   font-style: normal;
   font-size: 40rem;
   color: #515151;
 }
-.section4 .service-list .info .text {
-  position: absolute;
-  top: 90rem;
-  left: 70rem;
-  width: 100rem;
+.section4 .wrapper .content-wrapper .service-list .row .info .text {
+  padding-left: 22rem;
+  width: 115rem;
   font-family: 'roboto';
   font-weight: normal;
   font-style: normal;
   font-size: 20rem;
   color: #515151;
 }
-.section4 .service-list .info1 {
+.section4 .wrapper .content-wrapper .service-list .row .info3 .text {
+  width: 130rem;
+}
+.section4 .wrapper .content-wrapper .service-list .row .info4 .text {
+  width: 130rem;
+}
+.section4 .wrapper .content-wrapper .content-right {
   position: relative;
-  top: 100rem;
-  left: 474rem;
+  display: flex;
+  flex-direction: column;
+  padding-top: 100rem;
+  width: 430rem;
 }
-.section4 .service-list .info2 {
-  position: relative;
-  top: -110rem;
-  left: 723rem;
-}
-.section4 .service-list .info3 {
-  position: relative;
-  top: -50rem;
-  left: 474rem;
-}
-.section4 .service-list .info3 .title {
-  left: 50rem;
-}
-.section4 .service-list .info3 .text {
-  left: 70rem;
-  width: 120rem;
-}
-.section4 .service-list .info4 {
-  position: relative;
-  top: -260rem;
-  left: 723rem;
-}
-.section4 .content-right {
-  position: relative;
-  top: -630rem;
-  left: 1082rem;
-  width: 400rem;
-}
-.section4 .content-right .title {
+.section4 .wrapper .content-wrapper .content-right .title {
   font-family: 'roboto';
   font-weight: bold;
   font-style: normal;
@@ -351,18 +366,22 @@ section {
   color: #FFFFFF;
   width: 300rem;
 }
-.section4 .content-right .text {
+.section4 .wrapper .content-wrapper .content-right .text {
   font-family: 'roboto';
   font-weight: normal;
   font-style: normal;
   font-size: 18rem;
   color: #FFFFFF;
-  width: 400rem;
+  width: 430rem;
 }
 .section4 .cube {
-  display: block;
-  margin-top: -1830rem;
-  margin-left: 50rem;
+  position: relative;
+  margin-top: -1340rem;
+  margin-left: 20rem;
+}
+.section4 .cube img {
+  width: 424rem;
+  height: 351rem;
 }
 .section5 {
   position: relative;
@@ -370,19 +389,23 @@ section {
   background-size: 100%;
   height: 602rem;
 }
-.section5 .road {
-  position: relative;
-  top: 350rem;
-  left: 407rem;
+.section5 .wrap {
+  display: flex;
+  flex-direction: column;
+  width: 63%;
+  margin: 0 auto;
+  padding-top: 50rem;
+  gap: 66rem;
 }
-.section5 .content {
-  position: relative;
-  display: block;
+.section5 .wrap .road {
+  padding-left: 40rem;
 }
-.section5 .content .title {
-  position: absolute;
-  top: 20rem;
-  left: 360rem;
+.section5 .wrap .content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.section5 .wrap .content .title {
   font-family: 'roboto';
   font-weight: bold;
   font-style: normal;
@@ -390,14 +413,11 @@ section {
   color: #FFFFFF;
   width: 500rem;
 }
-.section5 .content .text {
-  position: absolute;
-  top: 180rem;
-  left: 360rem;
+.section5 .wrap .content .text {
   font-family: 'roboto';
   font-weight: normal;
   font-style: normal;
-  font-size: 18rem;
+  font-size: 16rem;
   color: #FFFFFF;
   width: 400rem;
 }
@@ -407,10 +427,16 @@ section {
   height: 1232rem;
   overflow: visible;
 }
-.section6 .title {
+.section6 .wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 30rem;
+  padding-top: 80rem;
+  width: 62%;
+  margin: 0 auto;
+}
+.section6 .wrap .title {
   position: relative;
-  display: block;
-  margin-left: 360rem;
   font-family: 'roboto';
   font-weight: bold;
   font-style: normal;
@@ -418,15 +444,14 @@ section {
   color: #FFFFFF;
   width: 500rem;
 }
-.section6 .container {
+.section6 .wrap .container {
   position: relative;
-  width: 62%;
-  margin: 100rem auto 0;
+  padding-top: 70rem;
 }
-.section6 .container .row .col {
+.section6 .wrap .container .row .col {
   cursor: pointer;
 }
-.section6 .container .row .col .content .title {
+.section6 .wrap .container .row .col .content .title {
   margin: 0 0;
   font-family: 'roboto';
   font-weight: bold;
@@ -435,7 +460,7 @@ section {
   color: #FFFFFF;
   width: 300rem;
 }
-.section6 .container .row .col .content .text {
+.section6 .wrap .container .row .col .content .text {
   font-family: 'roboto';
   font-weight: normal;
   font-style: normal;
@@ -443,17 +468,28 @@ section {
   color: #FFFFFF;
   width: 100rem;
 }
-.section6 .container .row .col .more {
+.section6 .wrap .container .row .col .content-down {
+  display: flex;
+  flex-direction: row;
+  gap: 55rem;
+}
+.section6 .wrap .container .row .col .content-down .text {
+  font-family: 'roboto';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 16rem;
+  color: #FFFFFF;
+  width: 100rem;
+}
+.section6 .wrap .container .row .col .content-down .more {
   position: relative;
   display: flex;
-  top: -30rem;
-  left: 150rem;
   background: url(../assets/btn-info-sec5.png) no-repeat;
   background-size: 100%;
   width: 176rem;
   height: 34rem;
 }
-.section6 .container .row .col .more a {
+.section6 .wrap .container .row .col .content-down .more a {
   position: relative;
   display: flex;
   align-items: center;
@@ -466,21 +502,21 @@ section {
   color: #FFFFFF;
   width: 100rem;
 }
-.section6 .container .row:nth-of-type(2) {
+.section6 .wrap .container .row:nth-of-type(2) {
   position: relative;
   top: 50rem;
 }
-.section6 .btn_more {
+.section6 .wrap .btn_more {
   position: relative;
   display: flex;
-  top: 100rem;
-  left: 808rem;
+  margin-left: 422rem;
+  margin-top: 100rem;
   background: url(../assets/btn-sec5.png) no-repeat;
   background-size: 100%;
   width: 250rem;
   height: 50rem;
 }
-.section6 .btn_more a {
+.section6 .wrap .btn_more a {
   position: relative;
   display: flex;
   align-items: center;
@@ -494,8 +530,12 @@ section {
   width: 200rem;
 }
 .section6 .cube {
-  display: block;
-  margin-top: -1270rem;
+  position: relative;
+  margin-top: -1361rem;
+}
+.section6 .cube img {
+  width: 494rem;
+  height: 441rem;
 }
 .section7 {
   background: url(../assets/bg-sec6.png) no-repeat;
@@ -636,18 +676,24 @@ section {
   opacity: 1;
 }
 .section8 .cube {
+  position: relative;
   display: block;
   margin-top: -400rem;
-  width: 412rem;
-  height: 309rem;
+}
+.section8 .cube img {
+  width: 566rem;
+  height: 563rem;
 }
 .section8 .cube2 {
+  position: relative;
   overflow: hidden;
   display: block;
-  margin-top: 305rem;
-  margin-left: 1332rem;
-  width: 456rem;
-  height: 343rem;
+  margin-top: 71rem;
+  margin-left: 1340rem;
+}
+.section8 .cube2 img {
+  width: 497rem;
+  height: 640rem;
 }
 .section9 {
   background: url(../assets/bg-sec8.png) top center no-repeat;

@@ -30,12 +30,9 @@ section {
 }
 .navbar .logo {
   position: relative;
-  left: 180rem;
-  width: 20%;
+  padding-left: 180rem;
+  width: 38%;
   height: 75rem;
-  text-align: center;
-  float: left;
-  line-height: 0;
 }
 .navbar .logo img {
   width: 276rem;
@@ -44,7 +41,7 @@ section {
   position: relative;
   display: flex;
   top: 0;
-  width: 80%;
+  width: 62%;
 }
 .navbar .menu li {
   position: relative;
@@ -55,10 +52,6 @@ section {
   padding: 0 13rem;
   cursor: pointer;
   list-style-type: none;
-  left: 300rem;
-}
-.navbar .menu li:nth-of-type(7) {
-  left: 480rem;
 }
 .navbar .menu li a {
   color: #fff;
@@ -88,7 +81,7 @@ section {
   top: -3rem;
   left: 80rem;
 }
-.navbar .menu .sub-menu {
+.navbar .menu li.drop .sub-menu {
   /* height: 20rem; */
   position: absolute;
   top: 150%;
@@ -101,6 +94,9 @@ section {
   -moz-transition: opacity 0.3s, visibility 0.3s;
   -o-transition: opacity 0.3s, visibility 0.3s;
   padding: 0.25rem;
+}
+.navbar .menu li:nth-of-type(7) {
+  margin-left: 180rem;
 }
 .navbar .menu .drop:hover .sub-menu,
 .navbar .menu .sub-menu:hover {
@@ -120,7 +116,7 @@ section {
 .section2 .content-up {
   position: relative;
   top: 80rem;
-  left: 383rem;
+  padding-left: 383rem;
 }
 .section2 .content-up .title-up {
   font-family: 'roboto';
@@ -130,36 +126,48 @@ section {
   color: #FFFFFF;
   width: 500rem;
 }
-.section2 .contact {
+.section2 .contact-wrap {
+  display: flex;
+  flex-direction: row;
+  width: 57%;
+  margin: 120rem auto 0;
+  gap: 30rem;
+}
+.section2 .contact-wrap .contact {
   position: relative;
   background: url(../assets/contact/bg-info.png) top center no-repeat;
   background-size: 100%;
   width: 330rem;
   height: 330rem;
   cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  padding-top: 50rem;
+  align-items: center;
 }
-.section2 .contact img {
+.section2 .contact-wrap .contact img {
   position: relative;
-  top: 50rem;
-  left: 110rem;
   width: 109rem;
   height: 109rem;
 }
-.section2 .contact .title {
+.section2 .contact-wrap .contact .content {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20rem;
+  align-items: center;
+}
+.section2 .contact-wrap .contact .content .title {
   position: relative;
-  top: 70rem;
-  left: 110rem;
   font-family: 'roboto';
   font-weight: bold;
   font-style: normal;
   font-size: 16rem;
   color: #FFFFFF;
   width: 300rem;
+  padding-left: 90rem;
 }
-.section2 .contact .text {
+.section2 .contact-wrap .contact .content .text {
   position: relative;
-  top: 80rem;
-  left: 80rem;
   text-align: center;
   font-family: 'roboto';
   font-weight: lighter;
@@ -168,40 +176,20 @@ section {
   color: #FFFFFF;
   width: 200rem;
 }
-.section2 .contact1 {
-  position: relative;
-  top: 120rem;
-  left: 425rem;
-}
-.section2 .contact1 .text {
-  width: 180rem;
-}
-.section2 .contact2 {
-  position: relative;
-  top: -210rem;
-  left: 795rem;
-}
-.section2 .contact2 .title {
-  left: 95rem;
-}
-.section2 .contact2 .text {
-  left: 68rem;
-}
-.section2 .contact3 {
-  position: relative;
-  top: -540rem;
-  left: 1165rem;
+.section2 .contact-wrap .contact2 .title,
+.section2 .contact-wrap .contact3 .title {
+  padding-left: 79rem !important;
 }
 .section2 .info {
   position: relative;
-  top: -400rem;
-  left: 600rem;
+  top: 150rem;
+  padding-left: 600rem;
   display: block;
 }
 .section2 .info .title-main {
   position: relative;
   top: -50rem;
-  left: 220rem;
+  padding-left: 220rem;
   font-family: 'roboto';
   font-weight: bold;
   font-style: normal;
@@ -228,7 +216,7 @@ section {
 .section2 .info .phone {
   position: relative;
   top: 0;
-  left: 25rem;
+  padding-left: 25rem;
 }
 .section2 .info .phone img {
   position: relative;
@@ -242,7 +230,7 @@ section {
 .section2 .info .telephone {
   position: relative;
   top: 0;
-  left: 25rem;
+  padding-left: 25rem;
 }
 .section2 .info .telephone img {
   position: relative;
@@ -256,7 +244,7 @@ section {
 .section2 .info .mail {
   position: relative;
   top: 0;
-  left: 25rem;
+  padding-left: 25rem;
 }
 .section2 .info .mail img {
   position: relative;
@@ -274,14 +262,14 @@ section {
 }
 .section2 .email-us {
   position: relative;
-  top: -450rem;
-  left: 500rem;
+  top: 70rem;
+  padding-left: 500rem;
   display: none;
 }
 .section2 .email-us .title-main {
   position: relative;
   top: 0;
-  left: 250rem;
+  margin-left: 250rem;
   font-family: 'roboto';
   font-weight: bold;
   font-style: normal;
@@ -347,22 +335,22 @@ section {
 .section2 .email-us form input.phone {
   position: relative;
   top: -8rem;
-  left: 450rem;
+  margin-left: 450rem;
 }
 .section2 .email-us form input.name {
   position: relative;
   top: 56rem;
-  left: 85rem;
+  margin-left: 85rem;
 }
 .section2 .email-us form input.email {
   position: relative;
   top: 86rem;
-  left: 85rem;
+  margin-left: 85rem;
 }
 .section2 .email-us form input.title {
   position: relative;
   top: 15rem;
-  left: 85rem;
+  margin-left: 85rem;
 }
 .section2 .email-us form textarea {
   display: block;
@@ -378,12 +366,12 @@ section {
 .section2 .email-us form textarea.text {
   position: relative;
   top: 50rem;
-  left: 85rem;
+  margin-left: 85rem;
 }
 .section2 .email-us form .btn {
   position: relative;
   top: 90rem;
-  left: 300rem;
+  margin-left: 300rem;
   display: block;
   background: url(../assets/contact/bg-btn.png) top center no-repeat;
   background-size: 100%;

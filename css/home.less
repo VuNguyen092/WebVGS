@@ -25,97 +25,94 @@ section{
 }
 
 .navbar{
-    position: relative;
-    display: flex;
-    width: 100%;
-    margin: 0 auto;
-    align-items: center;
-}
+  position: relative;
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+  align-items: center;
 
-.navbar .logo{
+  .logo{
     position: relative;
-    left: 180rem;
-    width: 20%;
+    padding-left: 180rem;
+    width: 38%;
     height: 75rem;
-    text-align: center;
-    float: left;
-    line-height: 0;
-}
 
-.navbar .logo img {
-    width: 276rem;
-}
+    img{
+      width: 276rem;
+    }
+  }
 
-.navbar .menu {
+  .menu {
     position: relative;
     display: flex;
     top: 0;
-    width: 80%;
-  }
+    width: 62%;
 
-  .navbar .menu li {
-    position: relative;
-    font-family: 'roboto';
-    font-weight: normal;
-    font-style: normal;
-    font-size: 16rem;
-    padding: 0 13rem;
-    cursor: pointer;
-    list-style-type: none;
-    left: 300rem;
-    z-index: 12;
-  }
+    li {
+      position: relative;
+      font-family: 'roboto';
+      font-weight: normal;
+      font-style: normal;
+      font-size: 16rem;
+      padding: 0 13rem;
+      cursor: pointer;
+      list-style-type: none;
 
-  .navbar .menu li:nth-of-type(7){
-    left: 480rem;
-  }
+      a{
+        color: #fff;
+        text-decoration: none;
+      }
 
-  .navbar .menu li a{
-      color: #fff;
-      text-decoration: none;
-  }
+      &.curr::before{
+        position: absolute;
+        content: "";
+        background: url(../assets/underline-nav.png) no-repeat;
+        background-size: 100%;
+        width: 80%;
+        height: 28px;
+        top: 76%;
+        z-index: -1;
+      }
 
-  .navbar .menu li.curr::before{
-    position: absolute;
-    content: "";
-    background: url(../assets/underline-nav.png) no-repeat;
-    background-size: 100%;
-    width: 80%;
-    height: 28px;
-    top: 76%;
-    z-index: -1;
-  }
+      &.drop::before{
+        position: absolute;
+        content: "";
+        background: url(../assets/Line-2-nav.png) no-repeat;
+        background-size: 100%;
+        width: 100%;
+        height: 2px;
+        top: 135%;
+      }
 
-  .navbar .menu li.drop::before{
-    position: absolute;
-    content: "";
-    background: url(../assets/Line-2-nav.png) no-repeat;
-    background-size: 100%;
-    width: 100%;
-    height: 2px;
-    top: 135%;
-  }
+      &.drop{
+        img{
+          position: absolute;
+          top: -3rem;
+          left: 80rem;
+        }
 
-  .navbar .menu li.drop img{
-    position: absolute;
-    top: -3rem;
-    left: 80rem;
-  }
+        .sub-menu {
+          /* height: 20rem; */
+          position: absolute;
+          top: 150%;
+          left: 15%;
+          width: 100rem;
+          visibility: hidden;
+          opacity: 0;
+          transition: opacity 0.3s, visibility 0.3s;
+          -webkit-transition: opacity 0.3s, visibility 0.3s;
+          -moz-transition: opacity 0.3s, visibility 0.3s;
+          -o-transition: opacity 0.3s, visibility 0.3s;
+          padding: 0.25rem;
+        }
+      }
+    }
 
-  .navbar .menu .sub-menu {
-    /* height: 20rem; */
-    position: absolute;
-    top: 150%;
-    left: 15%;
-    width: 100rem;
-    visibility: hidden;
-    opacity: 0;
-    transition: opacity 0.3s, visibility 0.3s;
-    -webkit-transition: opacity 0.3s, visibility 0.3s;
-    -moz-transition: opacity 0.3s, visibility 0.3s;
-    -o-transition: opacity 0.3s, visibility 0.3s;
-    padding: 0.25rem;
+    li:nth-of-type(7){
+      margin-left: 180rem;
+    }
   }
+}
 
   .navbar .menu .drop:hover .sub-menu,
   .navbar .menu .sub-menu:hover {
@@ -129,62 +126,68 @@ section{
     background: url(../assets/bg-sec1.png) no-repeat;
     background-size: 100%;
     height: 899rem;
+
+    .wrap{
+      display: flex;
+      flex-direction: column;
+      padding: 244rem 0 0 236rem;
+
+      .content{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        width: 550rem;
+        gap: 40rem;
+        // margin-top: 204rem;
+        // margin-left: 211rem;
+
+        .title{
+          font-family: 'roboto';
+          font-weight: bold;
+          font-style: normal;
+          font-size: 50rem;
+          color: #fff;
+        }
+
+        .text{
+          font-family: 'roboto';
+          font-weight: normal;
+          font-style: normal;
+          font-size: 16rem;
+          color: #fff;
+        }
+      }
+
+      .more-btn{
+        background: url(../assets/btn-sec1.png) no-repeat;
+        background-size: 100%;
+        position: absolute;
+        display: flex;
+        width: 281px;
+        height: 74px;
+        margin-top: 250rem;
+        // left: 0px;
+        // top: 256px;
+
+        a{
+          position: relative;
+          font-family: 'roboto';
+          font-weight: bold;
+          font-style: normal;
+          font-size: 25rem;
+          color: #fff;
+          padding: 20rem 0 0 90rem;
+          text-decoration: none;
+        }
+      }
+    }
 }  
-
-.section2 .content{
-    display: block;
-    position: relative;
-    width: 500rem;
-    margin-top: 204rem;
-    margin-left: 211rem;
-    // left: 211rem;
-    // top: 204rem;
-}
-
-.section2 .content .title p{
-  font-family: 'roboto';
-  font-weight: bold;
-  font-style: normal;
-  font-size: 50rem;
-  color: #fff;
-}
-
-.section2 .content .text p{
-  font-family: 'roboto';
-  font-weight: normal;
-  font-style: normal;
-  font-size: 18rem;
-  color: #fff;
-}
-
-.section2 .content .more-btn{
-  background: url(../assets/btn-sec1.png) no-repeat;
-  background-size: 100%;
-  position: absolute;
-  width: 281px;
-  height: 74px;
-  left: 0px;
-  top: 256px;
-}
-
-.section2 .content .more-btn a{
-  position: relative;
-  font-family: 'roboto';
-  font-weight: bold;
-  font-style: normal;
-  font-size: 25rem;
-  color: #fff;
-  left: 90px;
-  top: 20px;
-  text-decoration: none;
-}
 
 .section3{
   position: relative;
   background: url(../assets/bg-sec2.png) no-repeat;
   background-size: cover;
   height: 694rem;
-  // top: 900rem;
   overflow: visible;
 
   .content-wrap{
@@ -257,8 +260,11 @@ section{
   .wrapper{
     display: flex;
     flex-direction: column;
-    width: 66%;
+    width: 64%;
     margin: 0 auto;
+    padding-top: 50rem;
+
+    gap: 50rem;
 
     .content{
       display: flex;
@@ -281,6 +287,28 @@ section{
         font-size: 18rem;
         color: #fff;
         width: 700rem;
+
+        ul{
+          li{
+            list-style-type: none;
+          }
+
+          li:nth-of-type(1){
+            padding-left: 118rem;
+          }
+
+          li:nth-of-type(2){
+            padding-left: 135rem;
+          }
+
+          li:nth-of-type(3){
+            padding-left: 79rem;
+          }
+
+          li:nth-of-type(4){
+            padding-left: 45rem;
+          }
+        }
       }
     }
 
@@ -322,6 +350,8 @@ section{
           }
 
           .text-wrapper{
+            padding-top: 24rem;
+
             .text{
               font-family: 'roboto';
               font-weight: normal;
@@ -334,7 +364,7 @@ section{
               font-family: 'roboto';
               font-weight: bold;
               font-style: normal;
-              font-size: 36rem;
+              font-size: 26rem;
               color: #515151;
             }
           }
@@ -342,201 +372,167 @@ section{
         }
       }
     }
+
+    .content-wrapper{
+      display: flex;
+      flex-direction: row;
+      gap: 162rem;
+      padding-left: 120rem;
+      padding-top: 50rem;
+
+      .service-list{
+        display: flex;
+        flex-direction: column;
+        gap: 30rem;
+
+        .row{
+          display: flex;
+          flex-direction: row;
+          gap: 30rem;
+          .info{
+            background: url(../assets/bg-info2-sec3.png) no-repeat;
+            background-size: 100%;
+            width: 210rem;
+            height: 210rem;
+            display: flex;
+            flex-direction: column;
+            padding-top: 42rem;
+            align-items: center;
+
+            .title{
+              font-family: 'roboto';
+              font-weight: bold;
+              font-style: normal;
+              font-size: 40rem;
+              color: #515151;
+            }
+      
+            .text{
+              padding-left: 22rem;
+              width: 115rem;
+              font-family: 'roboto';
+              font-weight: normal;
+              font-style: normal;
+              font-size: 20rem;
+              color: #515151;
+            }
+          }
+
+          .info3{
+            .text{
+              width: 130rem;
+            }
+          }
+
+          .info4{
+            .text{
+              width: 130rem;
+            }
+          }
+        }
+      }
+
+      .content-right{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        padding-top: 100rem;
+        width: 430rem;
+    
+        .title{
+          font-family: 'roboto';
+          font-weight: bold;
+          font-style: normal;
+          font-size: 50rem;
+          color: #FFFFFF;
+          width: 300rem;
+        }
+    
+        .text{
+          font-family: 'roboto';
+          font-weight: normal;
+          font-style: normal;
+          font-size: 18rem;
+          color: #FFFFFF;
+          width: 430rem;
+        }
+      }
+    }
+  }
+
+  .cube{
+    position: relative;
+    margin-top: -1340rem;
+    margin-left: 20rem;
+
+    img{
+      width: 424rem;
+      height: 351rem;
+    }
   }
 }  
-
-// .section4 .images .i-right .info{
-//   background: url(../assets/bg-info-sec3.png) no-repeat;
-//   background-size: 100%;
-//   width: 597rem;
-//   height: 170rem;
-// }
-
-// .section4 .images .i-right .info p.text{
-//   font-family: 'roboto';
-//   font-weight: normal;
-//   font-style: normal;
-//   font-size: 18rem;
-//   color: #515151;
-// }
-
-// .section4 .images .i-right .info p.title{
-//   font-family: 'roboto';
-//   font-weight: bold;
-//   font-style: normal;
-//   font-size: 40rem;
-//   color: #515151;
-// }
-
-// .section4 .images .i-right .info1{
-//   position: relative;
-//   top: 0rem;
-//   left: 0rem;
-// }
-
-// .section4 .images .i-right .info1 img{
-//   position: absolute;
-//   top: 0rem;
-//   left: -7rem;
-// }
-
-// .section4 .images .i-right .info1 p.title{
-//   position: absolute;
-//   top: 0rem;
-//   left: 160rem;
-// }
-
-// .section4 .images .i-right .info1 p.text{
-//   position: absolute;
-//   top: 60rem;
-//   left: 170rem;
-//   width: 380rem;
-// }
-
-// .section4 .images .i-right .info2{
-//   position: relative;
-//   top: 30rem;
-//   left: 0rem;
-// }
-
-// .section4 .images .i-right .info2 img{
-//   position: absolute;
-//   top: 0rem;
-//   left: -7rem;
-// }
-
-// .section4 .images .i-right .info2 p.title{
-//   position: absolute;
-//   top: 0rem;
-//   left: 160rem;
-// }
-
-// .section4 .images .i-right .info2 p.text{
-//   position: absolute;
-//   top: 60rem;
-//   left: 170rem;
-//   width: 380rem;
-// }
-
-.section4{
-  .service-list{
-    .info{
-      background: url(../assets/bg-info2-sec3.png) no-repeat;
-      background-size: 100%;
-      width: 210rem;
-      height: 210rem;
-
-      .title{
-        position: absolute;
-        top: 40rem;
-        left: 70rem;
-        font-family: 'roboto';
-        font-weight: bold;
-        font-style: normal;
-        font-size: 40rem;
-        color: #515151;
-      }
-
-      .text{
-        position: absolute;
-        top: 90rem;
-        left: 70rem;
-        width: 100rem;
-        font-family: 'roboto';
-        font-weight: normal;
-        font-style: normal;
-        font-size: 20rem;
-        color: #515151;
-      }
-    }
-
-    .info1{
-      position: relative;
-      top: 100rem;
-      left: 474rem;
-    }
-
-    .info2{
-      position: relative;
-      top: -110rem;
-      left: 723rem;
-    }
-
-    .info3{
-      position: relative;
-      top: -50rem;
-      left: 474rem;
-
-      .title{
-        left: 50rem;
-      }
-
-      .text{
-        left: 70rem;
-        width: 120rem;
-      }
-    }
-
-    .info4{
-      position: relative;
-      top: -260rem;
-      left: 723rem;
-    }
-  }
-  .content-right{
-    position: relative;
-    top: -630rem;
-    left: 1082rem;
-    width: 400rem;
-
-    .title{
-      font-family: 'roboto';
-      font-weight: bold;
-      font-style: normal;
-      font-size: 50rem;
-      color: #FFFFFF;
-      width: 300rem;
-    }
-
-    .text{
-      font-family: 'roboto';
-      font-weight: normal;
-      font-style: normal;
-      font-size: 18rem;
-      color: #FFFFFF;
-      width: 400rem;
-    }
-  }
-  .cube{
-    // position: relative;
-    display: block;
-    margin-top: -1830rem;
-    margin-left: 50rem;
-  }
-}
 
 .section5{
   position: relative;
   background: url(../assets/bg-sec4.png) no-repeat;
   background-size: 100%;
   height: 602rem;
-  // top: 2965rem;
   
-  .road{
-    position: relative;
-    top: 350rem;
-    left: 407rem;
+  .wrap{
+    display: flex;
+    flex-direction: column;
+    width: 63%;
+    margin: 0 auto;
+    padding-top: 50rem;
+    gap: 66rem;
+    .road{
+      padding-left: 40rem;
+    }
+  
+    .content{
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      // gap: 2rem;
+  
+      .title{
+        font-family: 'roboto';
+        font-weight: bold;
+        font-style: normal;
+        font-size: 50rem;
+        color: #FFFFFF;
+        width: 500rem;
+      }
+  
+      .text{
+        font-family: 'roboto';
+        font-weight: normal;
+        font-style: normal;
+        font-size: 16rem;
+        color: #FFFFFF;
+        width: 400rem;
+      }
+    }
   }
+  
+} 
 
-  .content{
-    position: relative;
-    display: block;
-    // gap: 2rem;
+.section6{
+  background: url(../assets/bg-sec5.png) no-repeat;
+  background-size: 100%;
+  height: 1232rem;
+  overflow: visible;
+
+  .wrap{
+    display: flex;
+    flex-direction: column;
+    gap: 30rem;
+    padding-top: 80rem;
+    width: 62%;
+    margin: 0 auto;
 
     .title{
-      position: absolute;
-      top: 20rem;
-      left: 360rem;
+      position: relative;
       font-family: 'roboto';
       font-weight: bold;
       font-style: normal;
@@ -544,130 +540,115 @@ section{
       color: #FFFFFF;
       width: 500rem;
     }
+  
+    .container{
+      position: relative;
+      padding-top: 70rem;
+  
+      .row{
+        .col{
+          cursor: pointer;
 
-    .text{
-      position: absolute;
-      top: 180rem;
-      left: 360rem;
-      font-family: 'roboto';
-      font-weight: normal;
-      font-style: normal;
-      font-size: 18rem;
-      color: #FFFFFF;
-      width: 400rem;
-    }
-  }
-} 
-
-.section6{
-  background: url(../assets/bg-sec5.png) no-repeat;
-  background-size: 100%;
-  height: 1232rem;
-  // top: 3562rem;
-  overflow: visible;
-
-  .title{
-    position: relative;
-    display: block;
-    // top: 80rem;
-    // left: 360rem;
-    // margin-top: 80rem;
-    margin-left: 360rem;
-    font-family: 'roboto';
-    font-weight: bold;
-    font-style: normal;
-    font-size: 50rem;
-    color: #FFFFFF;
-    width: 500rem;
-  }
-
-  .container{
-    position: relative;
-    width: 62%;
-    margin: 100rem auto 0;
-
-    .row{
-      .col{
-        cursor: pointer;
-        .content{
-          .title{
-            margin: 0 0;
-            font-family: 'roboto';
-            font-weight: bold;
-            font-style: normal;
-            font-size: 24rem;
-            color: #FFFFFF;
-            width: 300rem;
+          .content{
+            .title{
+              margin: 0 0;
+              font-family: 'roboto';
+              font-weight: bold;
+              font-style: normal;
+              font-size: 24rem;
+              color: #FFFFFF;
+              width: 300rem;
+            }
+  
+            .text{
+              font-family: 'roboto';
+              font-weight: normal;
+              font-style: normal;
+              font-size: 16rem;
+              color: #FFFFFF;
+              width: 100rem;
+            }
           }
-
-          .text{
-            font-family: 'roboto';
-            font-weight: normal;
-            font-style: normal;
-            font-size: 16rem;
-            color: #FFFFFF;
-            width: 100rem;
-          }
-        }
-        .more{
-          position: relative;
-          display: flex;
-          top: -30rem;
-          left: 150rem;
-          background: url(../assets/btn-info-sec5.png) no-repeat;
-          background-size: 100%;
-          width: 176rem;
-          height: 34rem;
-
-          a{
-            position: relative;
+          .content-down{
             display: flex;
-            align-items: center;
-            left: 25%;
-            text-decoration: none;
-            font-family: 'roboto';
-            font-weight: normal;
-            font-style: normal;
-            font-size: 16rem;
-            color: #FFFFFF;
-            width: 100rem;
+            flex-direction: row;
+            gap: 55rem;
+  
+            .text{
+              font-family: 'roboto';
+              font-weight: normal;
+              font-style: normal;
+              font-size: 16rem;
+              color: #FFFFFF;
+              width: 100rem;
+            }
+  
+            .more{
+              position: relative;
+              display: flex;
+              background: url(../assets/btn-info-sec5.png) no-repeat;
+              background-size: 100%;
+              width: 176rem;
+              height: 34rem;
+    
+              a{
+                position: relative;
+                display: flex;
+                align-items: center;
+                left: 25%;
+                text-decoration: none;
+                font-family: 'roboto';
+                font-weight: normal;
+                font-style: normal;
+                font-size: 16rem;
+                color: #FFFFFF;
+                width: 100rem;
+              }
+            }
           }
+          
         }
       }
+      .row:nth-of-type(2){
+        position: relative;
+        top: 50rem;
+      }
     }
-    .row:nth-of-type(2){
-      position: relative;
-      top: 50rem;
-    }
-  }
-  .btn_more{
-    position: relative;
-    display: flex;
-    top: 100rem;
-    left: 808rem;
-    background: url(../assets/btn-sec5.png) no-repeat;
-    background-size: 100%;
-    width: 250rem;
-    height: 50rem;
-
-    a{
+    .btn_more{
       position: relative;
       display: flex;
-      align-items: center;
-      left: 30%;
-      text-decoration: none;
-      font-family: 'roboto';
-      font-weight: bold;
-      font-style: normal;
-      font-size: 24rem;
-      color: #FFFFFF;
-      width: 200rem;
+      margin-left: 422rem;
+      margin-top: 100rem;
+      background: url(../assets/btn-sec5.png) no-repeat;
+      background-size: 100%;
+      width: 250rem;
+      height: 50rem;
+  
+      a{
+        position: relative;
+        display: flex;
+        align-items: center;
+        left: 30%;
+        text-decoration: none;
+        font-family: 'roboto';
+        font-weight: bold;
+        font-style: normal;
+        font-size: 24rem;
+        color: #FFFFFF;
+        width: 200rem;
+      }
     }
   }
+  
   .cube{
-    // position: relative;
-    display: block;
-    margin-top: -1270rem;
+    position: relative;
+    // display: block;
+    margin-top: -1361rem;
+
+    img{
+      width: 494rem;
+      height: 441rem;
+    }
   }
 }
 
@@ -676,7 +657,6 @@ section{
   background-size: 100%;
   height: 866rem;
   margin-top: -62rem;
-  // top: 4722rem;
 
   .content{
     position: relative;
@@ -839,18 +819,28 @@ section{
   }
 
   .cube{
+    position: relative;
     display: block;
     margin-top: -400rem;
-    width: 412rem;
-    height: 309rem;
+
+    img{
+      width: 566rem;
+      height: 563rem;
+    }
+    
   }
   .cube2{
+    position: relative;
     overflow: hidden;
     display: block;
-    margin-top: 305rem;
-    margin-left: 1332rem;
-    width: 456rem;
-    height: 343rem;
+    margin-top: 71rem;
+    margin-left: 1340rem;
+
+    img{
+      width: 497rem;
+      height: 640rem;
+    }
+    
   }
 }
 
