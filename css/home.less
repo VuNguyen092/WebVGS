@@ -112,6 +112,17 @@ section{
       margin-left: 180rem;
     }
   }
+
+  .hamburger{
+    position: relative;
+    display: none;
+    cursor: pointer;
+    // left: 12rem;
+    img{
+      width: 64rem;
+      height: 43rem;
+    }
+  }
 }
 
   .navbar .menu .drop:hover .sub-menu,
@@ -121,6 +132,121 @@ section{
     opacity: 1;
   }
 
+.nav_mobile{
+  display: none;
+  position: relative;
+  width: 100%;
+
+  .close_menu {
+    position: relative;
+    img{
+      width: 78rem;
+    }
+  }
+}
+
+@media (max-width: 1024px){
+  .section_head{
+    height: 105rem;
+  }
+
+  .navbar{
+    .logo{
+      height: 105rem;
+      padding-top: 15rem;
+      padding-left: 230rem;
+    }
+
+    .menu{
+      display: none;
+      width: 0%;
+    }
+
+    .hamburger{
+      display: block;
+      width: 62%;
+      top: -0.2vh;
+      padding-left: 700rem;
+
+    }
+  }
+
+  .nav_mobile{
+    position: fixed;
+    background: rgba(0, 1, 2, 0.95);
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 35rem 0;
+    justify-content: space-between;
+    transform: translateY(-100vh);
+    transform-origin: top;
+    opacity: 0;
+    visibility: hidden;
+    transition: transform 0.3s, opacity 0.2s, visibility 0.2s;
+    
+    .menu {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: unset;
+      // top: 0;
+      // width: 62%;
+  
+      li {
+        position: relative;
+        font-family: 'roboto';
+        font-weight: normal;
+        font-style: normal;
+        font-size: 65rem;
+        // padding: 0 13rem;
+        cursor: pointer;
+        list-style-type: none;
+        line-height: 1.6;
+  
+        a{
+          color: #fff;
+          text-decoration: none;
+        }
+      }
+    }
+
+    &.open{
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    // .close_menu{
+    //   img{ width: 50rem; }
+    // }
+  }
+}
+
+@media (max-width: 768px){
+  .nav_mobile{
+    .menu{
+      li{
+        font-size: 75rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 540px){
+  .nav_mobile{
+    .menu{
+      li{
+        font-size: 85rem;
+      }
+    }
+  }
+}
+  
 .section2{
     position: relative;
     background: url(../assets/bg-sec1.png) no-repeat;
@@ -163,8 +289,8 @@ section{
         background-size: 100%;
         position: absolute;
         display: flex;
-        width: 281px;
-        height: 74px;
+        width: 281rem;
+        height: 74rem;
         margin-top: 250rem;
         // left: 0px;
         // top: 256px;
@@ -181,7 +307,106 @@ section{
         }
       }
     }
+
+    .pic{
+      display: none;
+      // margin-top: -550rem;
+      img{
+        width: 1546rem;
+        height: 991rem;
+      }
+    }
 }  
+
+@media (max-width: 1024px){
+  .section2{
+    background: #000000;
+    height: 1600rem;
+    .wrap{
+      padding: 0 0 0 236rem;
+      .content{
+        width: 610rem;
+        .title{
+          font-size: 50rem;
+        }
+        .text{
+          font-size: 24rem;
+        }
+      }
+
+      .more-btn{
+        margin-top: 320rem;
+        width: 300rem;
+        height: 80rem;
+        a{
+          font-size: 28rem;
+        }
+      }
+    }
+
+    .pic{
+      display: block;
+    }
+  }
+}
+
+@media (max-width: 768px){
+  .section2{
+    .wrap{
+      padding: 244rem 0 0 120rem;
+      .content{
+        width: 610rem;
+        gap: 20rem;
+
+        .title{
+          font-size: 60rem;
+        }
+        .text{
+          font-size: 26rem;
+          width: 730rem;
+        }
+      }
+
+      .more-btn{
+        margin-top: 330rem;
+        width: 315rem;
+        height: 84rem;
+        a{
+          font-size: 31rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 540px){
+  .section2{
+    .wrap{
+      padding: 244rem 0 0 120rem;
+      .content{
+        width: 610rem;
+        gap: 20rem;
+
+        .title{
+          font-size: 65rem;
+        }
+        .text{
+          font-size: 30rem;
+          width: 730rem;
+        }
+      }
+
+      .more-btn{
+        margin-top: 330rem;
+        width: 315rem;
+        height: 84rem;
+        a{
+          font-size: 31rem;
+        }
+      }
+    }
+  }
+}
 
 .section3{
   position: relative;

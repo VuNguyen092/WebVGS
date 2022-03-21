@@ -107,3 +107,12 @@ $(document).on("mouseout", ".slide-item, .next, .prev", () => {
   isPause = false;
   autoRunSlide();
 });
+
+//menu
+$(document).on("click", ".hamburger", () => {
+  $(".nav_mobile").addClass("open");
+});
+
+$(document).on("click", ".close_menu", () => {
+  $(".nav_mobile").removeClass("open");
+});
