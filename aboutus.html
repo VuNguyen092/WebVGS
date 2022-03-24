@@ -37,6 +37,27 @@
                     </div>
                 </li>
             </ul>
+            <div class="hamburger">
+                <img src="./assets/hamburger.png">
+            </div>
+        </div>
+        <div class="nav_mobile">
+            <div class="logo">
+                <a href="./index.html" alt="logo" title="VirtualGamingStudio">
+                    <img src="./assets/LOGO-COMPANY.png">
+                </a>
+            </div>
+            <ul class="menu">
+                <li class="curr"><a href="./aboutus.html" target="_blank">Về Chúng Tôi</a></li>
+                <li><a href="./game.html" target="_blank">Game</a></li>
+                <li><a href="#">Dịch Vụ</a></li>
+                <li><a href="./recruit.html" target="_blank">Tuyển Dụng</a></li>
+                <li><a href="./info.html" target="_blank">Tin Tức</a></li>
+                <li><a href="./contact.html" target="_blank">Liên hệ</a></li>
+            </ul>
+            <div class="close_menu">
+                <img src="./assets/cancel.png">
+            </div>
         </div>
     </div>
 
@@ -45,36 +66,64 @@
     </section>
 
     <section class="section2">
-        <div class="content-up">
-            <p class="title-up">Chúng tôi là VGS!</p>
-            <p class="text-up">Thành lập vào tháng 2 nam 2021, VGC hiện là công ty internet và công nghệ đi đầu trong
-                phát triển nguồn nhân lực</p>
-        </div>
-        <div class="content-down">
-            <p class="title-down">Quá trình hình thành và phát triển</p>
-            <p class="text-down">Các lĩnh vực hoạt động của VGC tập trung vào 4 nhóm sản phẩm chủ lực, mang đến cho
-                người dùng những trải nghiệm phong phú và đơn giản hơn.</p>
-        </div>
-        <div class="cube1">
-            <img src="./assets/about-us/cube1.png">
-        </div>
-        <div class="images">
-            <div class="img1">
-                <img src="./assets/about-us/pic3.png">
-
+        <div class="container-up">
+            <div class="content-up-wrap">
+                <div class="content-up">
+                    <p class="title-up">Chúng tôi là VGS!</p>
+                    <p class="text-up">Thành lập vào tháng 2 nam 2021, VGC hiện là công ty internet và công nghệ đi đầu trong
+                        phát triển nguồn nhân lực</p>
+                </div>
+                <div class="cube1">
+                    <img src="./assets/about-us/cube1.png">
+                </div>
             </div>
-            <div class="img2">
-                <img src="./assets/about-us/pic2.png">
-            </div>
-            <div class="img3">
-                <img src="./assets/about-us/pic1.png">
+            <div class="images">
+                <div class="img1">
+                    <img src="./assets/about-us/pic3.png">
+                </div>
+                <div class="img2">
+                    <img src="./assets/about-us/pic2.png">
+                </div>
+                <div class="img3">
+                    <img src="./assets/about-us/pic1.png">
+                </div>
             </div>
         </div>
-        <div class="cube2">
-            <img src="./assets/about-us/cube2.png">
+        
+        <div class="container-down">
+            <div class="content-down">
+                <p class="title-down">Quá trình hình thành và phát triển</p>
+                <p class="text-down">Các lĩnh vực hoạt động của VGC tập trung vào 4 nhóm sản phẩm chủ lực, mang đến cho
+                    người dùng những trải nghiệm phong phú và đơn giản hơn.</p>
+            </div>
+            <div class="cube2">
+                <img src="./assets/about-us/cube2.png">
+            </div>
         </div>
         <div class="road">
             <img src="./assets/pic-sec4.png">
+            <div class="content-wrap">
+                <div class="content-down">
+                    <p class="title">KHỞI NGHIỆP</p>
+                    <p class="text">2018</p>
+                </div>
+                <div class="content-down">
+                    <p class="title">BỨT PHÁ</p>
+                    <p class="text">2021</p>
+                </div>
+                <div class="content-down">
+                    <p class="title">ĐỊNH VỊ</p>
+                    <p class="text">2022</p>
+                </div>
+                <div class="content-down">
+                    <p class="title">NÂNG TẦM</p>
+                    <p class="text">2023</p>
+                </div>
+                <div class="content-down">
+                    <p class="title">HỘI NHẬP</p>
+                    <p class="text">2027</p>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -83,7 +132,7 @@
             <div class="row row-cols-3">
                 <div class="col ">
                     <div class="content-inner">
-                        <p>VGCorp- một công ty trẻ, một hoài bão lớn đang trên con đường thực hiện ước mơ khẳng định
+                        <p>VGCorp - một công ty trẻ, một hoài bão lớn đang trên con đường thực hiện ước mơ khẳng định
                             thương hiệu game Việt trên thị trường quốc tế! </p>
                         <p>Tải profile công ty</p>
                     </div>
@@ -111,6 +160,20 @@
 
     <script src="./Script/jquery.min.js"></script>
     <script>
+        function changeSize(size) {
+            var e = function () {
+            var cw = document.documentElement.clientWidth;
+            document.documentElement.style.fontSize = cw / size + "px";
+            };
+            e();
+            var ev = "orientationchange" in window ? "orientationchange" : "resize";
+            window.addEventListener && window.addEventListener(ev, e, false);
+            document.addEventListener &&
+            document.addEventListener("DOMContentLoaded", e, false);
+        }
+        
+        changeSize(1920);
+
         $(document).on("mouseover", ".menu li", (e) => {
             let isShow = $(e.currentTarget).hasClass("curr");
             if (!isShow) $(e.currentTarget).addClass("curr");
@@ -119,6 +182,15 @@
 
         $(document).on("mouseout", ".menu li", (e) => {
             $(e.currentTarget).removeClass("curr");
+        });
+
+        //menu
+        $(document).on("click", ".hamburger", () => {
+            $(".nav_mobile").addClass("open");
+        });
+
+        $(document).on("click", ".close_menu", () => {
+            $(".nav_mobile").removeClass("open");
         });
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"

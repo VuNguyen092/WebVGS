@@ -2009,3 +2009,137 @@ section {
   color: #FFFFFF;
   width: 500rem;
 }
+@media (max-width: 1024px) {
+  .section9 {
+    background: #000000;
+  }
+  .section9 .container {
+    width: 80%;
+  }
+  .section9 .container .row .col .content-inner {
+    top: 40rem;
+    left: 0;
+  }
+  .section9 .container .row .col .content-inner p {
+    font-size: 28rem;
+    width: 500rem;
+  }
+  .section9 .container .row .col .email {
+    top: 30rem;
+    left: 53rem;
+    border-radius: 25px;
+  }
+  .section9 .container .row .col .email input {
+    width: 350rem;
+    height: 60rem;
+    font-size: 28rem;
+    outline: none !important;
+  }
+  .section9 .container .row .col .email input::placeholder {
+    font-size: 28rem;
+  }
+  .section9 .container .row .col .sign {
+    top: 90rem;
+    left: 113rem;
+    width: 343rem;
+    height: 51rem;
+  }
+  .section9 .container .row .col .sign a {
+    font-size: 28rem;
+  }
+  .section9 .copy-right {
+    top: 70rem;
+    left: 195rem;
+    font-size: 28rem;
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .section9 {
+    height: 430rem;
+  }
+  .section9 .container {
+    width: 80%;
+  }
+  .section9 .container .row .col .content-inner {
+    top: 40rem;
+    left: 0;
+  }
+  .section9 .container .row .col .content-inner p {
+    font-size: 30rem;
+    width: 430rem;
+  }
+  .section9 .container .row .col .email {
+    top: 30rem;
+    left: 53rem;
+    border-radius: 25px;
+  }
+  .section9 .container .row .col .email input {
+    width: 350rem;
+    height: 60rem;
+    font-size: 30rem;
+  }
+  .section9 .container .row .col .email input::placeholder {
+    font-size: 30rem;
+  }
+  .section9 .container .row .col .sign {
+    top: 90rem;
+    left: 113rem;
+    width: 343rem;
+    height: 51rem;
+  }
+  .section9 .container .row .col .sign a {
+    font-size: 30rem;
+  }
+  .section9 .copy-right {
+    top: 70rem;
+    left: 195rem;
+    font-size: 30rem;
+    width: 100%;
+  }
+}
+@media (max-width: 540px) {
+  .section9 {
+    height: 600rem;
+  }
+  .section9 .container {
+    width: 80%;
+  }
+  .section9 .container .row .col .content-inner {
+    top: 40rem;
+    left: 0;
+  }
+  .section9 .container .row .col .content-inner p {
+    font-size: 40rem;
+    width: 500rem;
+  }
+  .section9 .container .row .col .email {
+    top: 30rem;
+    left: 53rem;
+    border-radius: 25px;
+  }
+  .section9 .container .row .col .email input {
+    width: 400rem;
+    height: 77rem;
+    font-size: 40rem;
+  }
+  .section9 .container .row .col .email input::placeholder {
+    font-size: 40rem;
+    padding: 0 30rem;
+  }
+  .section9 .container .row .col .sign {
+    top: 90rem;
+    left: 113rem;
+    width: 390rem;
+    height: 61rem;
+  }
+  .section9 .container .row .col .sign a {
+    font-size: 40rem;
+  }
+  .section9 .copy-right {
+    top: 70rem;
+    left: 195rem;
+    font-size: 40rem;
+    width: 100%;
+  }
+}
