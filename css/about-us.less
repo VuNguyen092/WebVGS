@@ -11,7 +11,7 @@ a{
     }
   
   section{
-      position: absolute;
+      position: relative;
       width: 100%;
       overflow: hidden;
   }
@@ -241,24 +241,26 @@ a{
 }
 
 .section1{
-    position: relative;
-    height: 699rem;
-    img{
-        width: 100%;
-        height: 100%;
-    }
-}   
+  position: relative;
+  height: 699rem;
+  img{
+      width: 100%;
+      height: 100%;
+  }
+} 
 
 .section2{
   position: relative;
   background: #000000;
-  height: 1200rem;
+  // height: 1200rem;
+  height: 1300rem;
 
   .container-up{
     display: flex;
     flex-direction: row;
     width: 60%;
-    margin: 90rem auto 0;
+    margin: 0 auto;
+    padding-top: 90rem;
     gap: 150rem;
 
     .content-up-wrap{
@@ -326,6 +328,8 @@ a{
         position: relative;
         margin-top: -108rem;
         padding-left: 83rem;
+        // top: -256rem;
+        // padding-left: 70rem;
 
         img{
           width: 312rem;
@@ -339,7 +343,8 @@ a{
     display: flex;
     flex-direction: row;
     width: 80%;
-    margin: -50rem 0 0 380rem;
+    // margin: -50rem 0 0 380rem;
+    margin: 0 0 0 380rem;
     gap: 600rem;
 
     .content-down{
@@ -446,7 +451,7 @@ a{
 
 @media (max-width: 1024px){
   .section2{
-    height: 1400rem;
+    height: 1500rem;
 
     .container-up{
       .content-up-wrap{ 
@@ -495,7 +500,6 @@ a{
     
     .container-down{
       width: 80%;
-      margin: -50rem 0 0 380rem;
       gap: 450rem;
   
       .content-down{
@@ -512,7 +516,8 @@ a{
   
     .road{
       padding-left: 225rem;
-      margin-top: 100rem;
+      // margin-top: 100rem;
+      padding-top: 100rem;
       img{
         width: 1436rem;
         height: 48rem;
@@ -558,7 +563,7 @@ a{
     height: 1800rem;
 
     .container-up{
-      margin: 190rem auto 0;
+      // margin: 190rem auto 0;
       .content-up-wrap{ 
         .content-up{
           .title-up{
@@ -581,7 +586,7 @@ a{
         }
         .img2{
           position: relative;
-          margin-top: -203rem;
+          margin-top: -213rem;
           padding-left: 402rem;
   
           img{
@@ -592,7 +597,7 @@ a{
   
         .img3{
           position: relative;
-          margin-top: -184rem;
+          margin-top: -180rem;
           padding-left: 132rem;
   
           img{
@@ -622,7 +627,8 @@ a{
   
     .road{
       padding-left: 180rem;
-      margin-top: 100rem;
+      // margin-top: 100rem;
+      padding-top: 100rem;
       img{
         width: 1599rem;
         height: 54rem;
@@ -825,6 +831,9 @@ a{
           }
         }
       }
+      .col:nth-of-type(2){
+        padding-left: 30rem;
+      }
     }
   }
 
@@ -842,9 +851,10 @@ a{
 }
   @media (max-width: 1024px){
     .section9{
-      height: 430rem;
+      height: 600rem;
       .container{
         width: 80%;
+        padding-top: 150rem;
         .row{
           .col{
             .content-inner{
@@ -954,7 +964,7 @@ a{
   
   @media (max-width: 540px){
     .section9{
-      height: 600rem;
+      height: 800rem;
       .container{
         width: 80%;
         // padding-top: 90rem;
@@ -965,7 +975,7 @@ a{
               left: 0;
     
               p{
-                font-size: 40rem;
+                font-size: 45rem;
                 width: 500rem;
               }
             }
@@ -976,13 +986,13 @@ a{
               border-radius: 25px;
     
               input{
-                width: 400rem;
-                height: 77rem;
-                font-size: 40rem;
+                width: 460rem;
+                height: 92rem;
+                font-size: 45rem;
               }
     
               input::placeholder{
-                font-size: 40rem;
+                font-size: 45rem;
                 padding: 0 30rem;
               }
             }
@@ -990,11 +1000,12 @@ a{
             .sign{
               top: 90rem;
               left: 113rem;
-              width: 390rem;
-              height: 61rem;
+              width: 460rem;
+              height: 68rem;
   
               a{
-                font-size: 40rem;
+                left: 32%;
+                font-size: 45rem;
               }
             }
           }
@@ -1003,14 +1014,8 @@ a{
       .copy-right{
         top: 70rem;
         left: 195rem;
-        font-size: 40rem;
+        font-size: 45rem;
         width: 100%;
       }
     }
-  }  
-
-  // @media (max-width: 375px){
-  //   .section9{
-  //     height: 710rem;
-  //   }
-  // }
+  } 

@@ -1998,6 +1998,9 @@ section {
   color: #FFFFFF;
   width: 200rem;
 }
+.section9 .container .row .col:nth-of-type(2) {
+  padding-left: 30rem;
+}
 .section9 .copy-right {
   position: relative;
   top: 166rem;
@@ -2015,6 +2018,7 @@ section {
   }
   .section9 .container {
     width: 80%;
+    padding-top: 150rem;
   }
   .section9 .container .row .col .content-inner {
     top: 40rem;
@@ -2100,7 +2104,7 @@ section {
 }
 @media (max-width: 540px) {
   .section9 {
-    height: 600rem;
+    height: 800rem;
   }
   .section9 .container {
     width: 80%;
@@ -2110,7 +2114,7 @@ section {
     left: 0;
   }
   .section9 .container .row .col .content-inner p {
-    font-size: 40rem;
+    font-size: 45rem;
     width: 500rem;
   }
   .section9 .container .row .col .email {
@@ -2119,27 +2123,28 @@ section {
     border-radius: 25px;
   }
   .section9 .container .row .col .email input {
-    width: 400rem;
-    height: 77rem;
-    font-size: 40rem;
+    width: 460rem;
+    height: 92rem;
+    font-size: 45rem;
   }
   .section9 .container .row .col .email input::placeholder {
-    font-size: 40rem;
+    font-size: 45rem;
     padding: 0 30rem;
   }
   .section9 .container .row .col .sign {
     top: 90rem;
     left: 113rem;
-    width: 390rem;
-    height: 61rem;
+    width: 460rem;
+    height: 68rem;
   }
   .section9 .container .row .col .sign a {
-    font-size: 40rem;
+    left: 32%;
+    font-size: 45rem;
   }
   .section9 .copy-right {
     top: 70rem;
     left: 195rem;
-    font-size: 40rem;
+    font-size: 45rem;
     width: 100%;
   }
 }

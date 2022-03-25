@@ -205,62 +205,192 @@ section {
 .section2 {
   position: relative;
   background: #000000;
-  height: 1900rem;
+  height: 2300rem;
 }
 .section2 .container {
   position: relative;
   width: 80%;
-  margin: 120rem auto 0;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  padding-top: 120rem;
 }
-.section2 .container .row .col {
+.section2 .container .card-wrap {
+  display: flex;
+  flex-direction: row;
+  gap: 35rem;
+}
+.section2 .container .card-wrap .card {
   position: relative;
   background: url(../assets/game/card.png) top center no-repeat;
   background-size: 100%;
   width: 377rem;
-  height: 379rem;
-  margin: 0 20rem;
+  height: 550rem;
   cursor: pointer;
+  display: flex;
+  flex-direction: row;
 }
-.section2 .container .row .col img {
+.section2 .container .card-wrap .card img {
   position: relative;
-  top: 265rem;
-  left: 10rem;
+  width: 85rem;
+  height: 85rem;
+  margin: 305rem 0 0 30rem;
 }
-.section2 .container .row .col .content {
+.section2 .container .card-wrap .card .content {
   position: relative;
-  top: 185rem;
-  left: 110rem;
+  margin: 305rem 0 0 30rem;
 }
-.section2 .container .row .col .content .title {
+.section2 .container .card-wrap .card .content .title {
   margin: 0 0;
   font-family: 'roboto';
   font-weight: bold;
   font-style: normal;
-  font-size: 24rem;
+  font-size: 30rem;
   color: #181818;
   width: 200rem;
+  line-height: 1;
 }
-.section2 .container .row .col .content .text {
+.section2 .container .card-wrap .card .content .text {
   font-family: 'roboto';
   font-weight: normal;
   font-style: normal;
-  font-size: 12rem;
+  font-size: 20rem;
   color: #C60000;
   width: 100rem;
   cursor: pointer;
   text-decoration: none;
 }
-.section2 .container .row:nth-of-type(2) {
-  position: relative;
-  top: 50rem;
+.section2 .container .card-wrap > * {
+  flex-grow: 1;
+  flex-basis: 33%;
 }
-.section2 .container .row:nth-of-type(3) {
-  position: relative;
-  top: 100rem;
+.section2 .container-mb {
+  display: none;
 }
-.section2 .container .row:nth-of-type(4) {
-  position: relative;
-  top: 150rem;
+@media (max-width: 1870px) {
+  .section2 .container .card-wrap .card img {
+    position: relative;
+    width: 85rem;
+    height: 85rem;
+    margin: 328rem 0 0 30rem;
+  }
+  .section2 .container .card-wrap .card .content {
+    position: relative;
+    margin: 328rem 0 0 30rem;
+  }
+}
+@media (max-width: 1736px) {
+  .section2 .container .card-wrap .card img {
+    margin: 354rem 0 0 30rem;
+  }
+  .section2 .container .card-wrap .card .content {
+    margin: 354rem 0 0 30rem;
+  }
+}
+@media (max-width: 1024px) {
+  .section2 {
+    height: 3400rem;
+  }
+  .section2 .container {
+    display: none;
+  }
+  .section2 .container-mb {
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    padding-top: 120rem;
+  }
+  .section2 .container-mb .card-wrap {
+    display: flex;
+    flex-direction: row;
+    gap: 35rem;
+  }
+  .section2 .container-mb .card-wrap .card {
+    position: relative;
+    background: url(../assets/game/card.png) top center no-repeat;
+    background-size: 100%;
+    height: 800rem;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+  }
+  .section2 .container-mb .card-wrap .card img {
+    position: relative;
+    width: 150rem;
+    height: 150rem;
+    margin: 555rem 0 0 40rem;
+  }
+  .section2 .container-mb .card-wrap .card .content {
+    position: relative;
+    margin: 555rem 0 0 30rem;
+  }
+  .section2 .container-mb .card-wrap .card .content .title {
+    font-family: 'roboto';
+    font-weight: bold;
+    font-style: normal;
+    font-size: 48rem;
+    color: #181818;
+    width: 300rem;
+    line-height: 1;
+  }
+  .section2 .container-mb .card-wrap .card .content .text {
+    font-family: 'roboto';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24rem;
+    color: #C60000;
+    width: 100rem;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  .section2 .container-mb .card-wrap > * {
+    flex-grow: 1;
+    flex-basis: 50%;
+  }
+}
+@media (max-width: 768px) {
+  .section2 .container-mb .card-wrap {
+    gap: 35rem;
+  }
+  .section2 .container-mb .card-wrap .card img {
+    width: 150rem;
+    height: 150rem;
+    margin: 555rem 0 0 40rem;
+  }
+  .section2 .container-mb .card-wrap .card .content {
+    margin: 555rem 0 0 30rem;
+  }
+  .section2 .container-mb .card-wrap .card .content .title {
+    font-size: 53rem;
+    width: 320rem;
+  }
+  .section2 .container-mb .card-wrap .card .content .text {
+    font-size: 30rem;
+    width: 100rem;
+  }
+}
+@media (max-width: 540px) {
+  .section2 .container-mb .card-wrap {
+    gap: 35rem;
+  }
+  .section2 .container-mb .card-wrap .card img {
+    width: 150rem;
+    height: 150rem;
+    margin: 555rem 0 0 40rem;
+  }
+  .section2 .container-mb .card-wrap .card .content {
+    margin: 540rem 0 0 30rem;
+  }
+  .section2 .container-mb .card-wrap .card .content .title {
+    font-size: 58rem;
+    width: 330rem;
+  }
+  .section2 .container-mb .card-wrap .card .content .text {
+    font-size: 45rem;
+    width: 100rem;
+  }
 }
 .section9 {
   position: relative;
@@ -340,6 +470,9 @@ section {
   color: #FFFFFF;
   width: 200rem;
 }
+.section9 .container .row .col:nth-of-type(2) {
+  padding-left: 30rem;
+}
 .section9 .copy-right {
   position: relative;
   top: 166rem;
@@ -350,4 +483,141 @@ section {
   font-size: 16rem;
   color: #FFFFFF;
   width: 500rem;
+}
+@media (max-width: 1024px) {
+  .section9 {
+    height: 600rem;
+  }
+  .section9 .container {
+    width: 80%;
+    padding-top: 150rem;
+  }
+  .section9 .container .row .col .content-inner {
+    top: 40rem;
+    left: 0;
+  }
+  .section9 .container .row .col .content-inner p {
+    font-size: 28rem;
+    width: 500rem;
+  }
+  .section9 .container .row .col .email {
+    top: 30rem;
+    left: 53rem;
+    border-radius: 25px;
+  }
+  .section9 .container .row .col .email input {
+    width: 350rem;
+    height: 60rem;
+    font-size: 28rem;
+    outline: none !important;
+  }
+  .section9 .container .row .col .email input::placeholder {
+    font-size: 28rem;
+  }
+  .section9 .container .row .col .sign {
+    top: 90rem;
+    left: 113rem;
+    width: 343rem;
+    height: 51rem;
+  }
+  .section9 .container .row .col .sign a {
+    font-size: 28rem;
+  }
+  .section9 .copy-right {
+    top: 70rem;
+    left: 195rem;
+    font-size: 28rem;
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .section9 {
+    height: 600rem;
+  }
+  .section9 .container {
+    width: 80%;
+    padding-top: 150rem;
+  }
+  .section9 .container .row .col .content-inner {
+    top: 40rem;
+    left: 0;
+  }
+  .section9 .container .row .col .content-inner p {
+    font-size: 30rem;
+    width: 430rem;
+  }
+  .section9 .container .row .col .email {
+    top: 30rem;
+    left: 53rem;
+    border-radius: 25px;
+  }
+  .section9 .container .row .col .email input {
+    width: 350rem;
+    height: 60rem;
+    font-size: 30rem;
+  }
+  .section9 .container .row .col .email input::placeholder {
+    font-size: 30rem;
+  }
+  .section9 .container .row .col .sign {
+    top: 90rem;
+    left: 113rem;
+    width: 343rem;
+    height: 51rem;
+  }
+  .section9 .container .row .col .sign a {
+    font-size: 30rem;
+  }
+  .section9 .copy-right {
+    top: 70rem;
+    left: 195rem;
+    font-size: 30rem;
+    width: 100%;
+  }
+}
+@media (max-width: 540px) {
+  .section9 {
+    height: 800rem;
+  }
+  .section9 .container {
+    width: 80%;
+  }
+  .section9 .container .row .col .content-inner {
+    top: 40rem;
+    left: 0;
+  }
+  .section9 .container .row .col .content-inner p {
+    font-size: 45rem;
+    width: 500rem;
+  }
+  .section9 .container .row .col .email {
+    top: 30rem;
+    left: 53rem;
+    border-radius: 25px;
+  }
+  .section9 .container .row .col .email input {
+    width: 460rem;
+    height: 92rem;
+    font-size: 45rem;
+  }
+  .section9 .container .row .col .email input::placeholder {
+    font-size: 45rem;
+    padding: 0 30rem;
+  }
+  .section9 .container .row .col .sign {
+    top: 90rem;
+    left: 113rem;
+    width: 460rem;
+    height: 68rem;
+  }
+  .section9 .container .row .col .sign a {
+    left: 32%;
+    font-size: 45rem;
+  }
+  .section9 .copy-right {
+    top: 70rem;
+    left: 195rem;
+    font-size: 45rem;
+    width: 100%;
+  }
 }
