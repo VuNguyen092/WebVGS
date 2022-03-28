@@ -9,13 +9,12 @@ body {
   margin: 0 auto;
 }
 section {
-  position: absolute;
+  position: relative;
   width: 100%;
   overflow: hidden;
 }
 .section_head {
   position: fixed;
-  top: 0;
   width: 100%;
   height: 75rem;
   background: #050505;
@@ -98,27 +97,127 @@ section {
 .navbar .menu li:nth-of-type(7) {
   margin-left: 180rem;
 }
+.navbar .hamburger {
+  position: relative;
+  display: none;
+  cursor: pointer;
+}
+.navbar .hamburger img {
+  width: 64rem;
+  height: 43rem;
+}
 .navbar .menu .drop:hover .sub-menu,
 .navbar .menu .sub-menu:hover {
   height: auto;
   visibility: visible;
   opacity: 1;
 }
+.nav_mobile {
+  display: none;
+  position: relative;
+  width: 100%;
+}
+.nav_mobile .close_menu {
+  position: relative;
+}
+.nav_mobile .close_menu img {
+  width: 78rem;
+}
+@media (max-width: 1024px) {
+  .section_head {
+    height: 105rem;
+  }
+  .navbar .logo {
+    height: 105rem;
+    padding-top: 15rem;
+    padding-left: 230rem;
+  }
+  .navbar .menu {
+    display: none;
+    width: 0%;
+  }
+  .navbar .hamburger {
+    display: block;
+    width: 62%;
+    top: -0.2vh;
+    padding-left: 1000rem;
+  }
+  .nav_mobile {
+    position: fixed;
+    background: rgba(0, 1, 2, 0.95);
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 35rem 0;
+    justify-content: space-between;
+    transform: translateY(-100vh);
+    transform-origin: top;
+    opacity: 0;
+    visibility: hidden;
+    transition: transform 0.3s, opacity 0.2s, visibility 0.2s;
+  }
+  .nav_mobile .menu {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: unset;
+  }
+  .nav_mobile .menu li {
+    position: relative;
+    font-family: 'roboto';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 65rem;
+    cursor: pointer;
+    list-style-type: none;
+    line-height: 1.6;
+  }
+  .nav_mobile .menu li a {
+    color: #fff;
+    text-decoration: none;
+  }
+  .nav_mobile.open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+}
+@media (max-width: 768px) {
+  .nav_mobile .menu li {
+    font-size: 75rem;
+  }
+}
+@media (max-width: 540px) {
+  .nav_mobile .menu li {
+    font-size: 85rem;
+  }
+}
 .section1 {
   position: relative;
+  height: 399rem;
+}
+.section1 img {
+  width: 1920rem;
   height: 399rem;
 }
 .section2 {
   position: relative;
   background: #181818fd;
+  height: auto;
+}
+.section2 .container {
   height: 1000rem;
 }
-.section2 .content-up {
+.section2 .container .content-up {
   position: relative;
   top: 80rem;
   padding-left: 383rem;
 }
-.section2 .content-up .title-up {
+.section2 .container .content-up .title-up {
   font-family: 'roboto';
   font-weight: bold;
   font-style: normal;
@@ -126,14 +225,14 @@ section {
   color: #FFFFFF;
   width: 500rem;
 }
-.section2 .contact-wrap {
+.section2 .container .contact-wrap {
   display: flex;
   flex-direction: row;
   width: 57%;
   margin: 120rem auto 0;
   gap: 30rem;
 }
-.section2 .contact-wrap .contact {
+.section2 .container .contact-wrap .contact {
   position: relative;
   background: url(../assets/contact/bg-info.png) top center no-repeat;
   background-size: 100%;
@@ -145,18 +244,18 @@ section {
   padding-top: 50rem;
   align-items: center;
 }
-.section2 .contact-wrap .contact img {
+.section2 .container .contact-wrap .contact img {
   position: relative;
   width: 109rem;
   height: 109rem;
 }
-.section2 .contact-wrap .contact .content {
+.section2 .container .contact-wrap .contact .content {
   display: flex;
   flex-direction: column;
   margin-top: 20rem;
   align-items: center;
 }
-.section2 .contact-wrap .contact .content .title {
+.section2 .container .contact-wrap .contact .content .title {
   position: relative;
   font-family: 'roboto';
   font-weight: bold;
@@ -166,7 +265,7 @@ section {
   width: 300rem;
   padding-left: 90rem;
 }
-.section2 .contact-wrap .contact .content .text {
+.section2 .container .contact-wrap .contact .content .text {
   position: relative;
   text-align: center;
   font-family: 'roboto';
@@ -176,17 +275,17 @@ section {
   color: #FFFFFF;
   width: 200rem;
 }
-.section2 .contact-wrap .contact2 .title,
-.section2 .contact-wrap .contact3 .title {
+.section2 .container .contact-wrap .contact2 .title,
+.section2 .container .contact-wrap .contact3 .title {
   padding-left: 79rem !important;
 }
-.section2 .info {
+.section2 .container .info {
   position: relative;
   top: 150rem;
-  padding-left: 600rem;
+  padding-left: 480rem;
   display: block;
 }
-.section2 .info .title-main {
+.section2 .container .info .title-main {
   position: relative;
   top: -50rem;
   padding-left: 220rem;
@@ -197,7 +296,7 @@ section {
   color: #FFFFFF;
   width: 500rem;
 }
-.section2 .info .title {
+.section2 .container .info .title {
   font-family: 'roboto';
   font-weight: bold;
   font-style: normal;
@@ -205,7 +304,7 @@ section {
   color: #FFFFFF;
   width: 300rem;
 }
-.section2 .info .text {
+.section2 .container .info .text {
   font-family: 'roboto';
   font-weight: normal;
   font-style: normal;
@@ -213,60 +312,68 @@ section {
   color: #cfcdcd;
   width: 300rem;
 }
-.section2 .info .phone {
+.section2 .container .info .phone {
   position: relative;
   top: 0;
   padding-left: 25rem;
 }
-.section2 .info .phone img {
+.section2 .container .info .phone img {
   position: relative;
   top: 20rem;
   left: -25rem;
+  width: 18rem;
+  height: 18rem;
 }
-.section2 .info .phone .text:hover {
+.section2 .container .info .phone .text:hover {
   color: #FFFFFF;
   cursor: pointer;
 }
-.section2 .info .telephone {
+.section2 .container .info .telephone {
   position: relative;
   top: 0;
   padding-left: 25rem;
 }
-.section2 .info .telephone img {
+.section2 .container .info .telephone img {
   position: relative;
   top: 20rem;
   left: -25rem;
+  width: 18rem;
+  height: 18rem;
 }
-.section2 .info .telephone .text:hover {
+.section2 .container .info .telephone .text:hover {
   color: #FFFFFF;
   cursor: pointer;
 }
-.section2 .info .mail {
+.section2 .container .info .mail {
   position: relative;
   top: 0;
   padding-left: 25rem;
 }
-.section2 .info .mail img {
+.section2 .container .info .mail img {
   position: relative;
   top: 23rem;
   left: -25rem;
+  width: 18rem;
+  height: 18rem;
 }
-.section2 .info .mail .text:hover {
+.section2 .container .info .mail .text:hover {
   color: #FFFFFF;
   cursor: pointer;
 }
-.section2 .info img {
+.section2 .container .info img {
   position: relative;
   top: -170rem;
   left: 220rem;
+  width: 454rem;
+  height: 163rem;
 }
-.section2 .email-us {
+.section2 .container .email-us {
   position: relative;
   top: 70rem;
-  padding-left: 500rem;
+  padding-left: 410rem;
   display: none;
 }
-.section2 .email-us .title-main {
+.section2 .container .email-us .title-main {
   position: relative;
   top: 0;
   margin-left: 250rem;
@@ -277,7 +384,7 @@ section {
   color: #FFFFFF;
   width: 500rem;
 }
-.section2 .email-us form label {
+.section2 .container .email-us form label {
   position: relative;
   top: 0;
   left: 0;
@@ -288,32 +395,32 @@ section {
   color: #FFFFFF;
   width: 500rem;
 }
-.section2 .email-us form label.name {
+.section2 .container .email-us form label.name {
   position: relative;
   top: 50rem;
   left: 85rem;
 }
-.section2 .email-us form label.email {
+.section2 .container .email-us form label.email {
   position: relative;
   top: 80rem;
   left: 85rem;
 }
-.section2 .email-us form label.phone {
+.section2 .container .email-us form label.phone {
   position: relative;
   top: -15rem;
   left: 455rem;
 }
-.section2 .email-us form label.title {
+.section2 .container .email-us form label.title {
   position: relative;
   top: 10rem;
   left: 85rem;
 }
-.section2 .email-us form label.text {
+.section2 .container .email-us form label.text {
   position: relative;
   top: 40rem;
   left: 85rem;
 }
-.section2 .email-us form input {
+.section2 .container .email-us form input {
   display: block;
   width: 727rem;
   box-shadow: none;
@@ -321,54 +428,54 @@ section {
   height: 50rem;
   padding: 0 20rem;
   margin-bottom: 19rem;
-  border-radius: 12px;
+  border-radius: 6px;
   font-family: 'roboto';
   font-weight: lighter;
   font-style: normal;
   font-size: 16rem;
   color: #181818fd;
 }
-.section2 .email-us form input.email,
-.section2 .email-us form input.phone {
+.section2 .container .email-us form input.email,
+.section2 .container .email-us form input.phone {
   width: 360rem;
 }
-.section2 .email-us form input.phone {
+.section2 .container .email-us form input.phone {
   position: relative;
   top: -8rem;
   margin-left: 450rem;
 }
-.section2 .email-us form input.name {
+.section2 .container .email-us form input.name {
   position: relative;
   top: 56rem;
   margin-left: 85rem;
 }
-.section2 .email-us form input.email {
+.section2 .container .email-us form input.email {
   position: relative;
   top: 86rem;
   margin-left: 85rem;
 }
-.section2 .email-us form input.title {
+.section2 .container .email-us form input.title {
   position: relative;
   top: 15rem;
   margin-left: 85rem;
 }
-.section2 .email-us form textarea {
+.section2 .container .email-us form textarea {
   display: block;
   width: 727rem;
   height: 190rem;
-  border-radius: 12px;
+  border-radius: 6px;
   font-family: 'roboto';
   font-weight: lighter;
   font-style: normal;
   font-size: 16rem;
   color: #181818fd;
 }
-.section2 .email-us form textarea.text {
+.section2 .container .email-us form textarea.text {
   position: relative;
   top: 50rem;
   margin-left: 85rem;
 }
-.section2 .email-us form .btn {
+.section2 .container .email-us form .btn {
   position: relative;
   top: 90rem;
   margin-left: 300rem;
@@ -378,7 +485,7 @@ section {
   width: 250rem;
   height: 50rem;
 }
-.section2 .email-us form .btn a {
+.section2 .container .email-us form .btn a {
   position: relative;
   top: 8rem;
   left: 0;
@@ -389,6 +496,873 @@ section {
   font-size: 24rem;
   color: #FFFFFF;
   text-decoration: none;
+}
+.section2 .container-mb {
+  display: none;
+  height: 1000rem;
+}
+.section2 .container-mb .content-up {
+  position: relative;
+  top: 80rem;
+  padding-left: 383rem;
+}
+.section2 .container-mb .content-up .title-up {
+  font-family: 'roboto';
+  font-weight: bold;
+  font-style: normal;
+  font-size: 48rem;
+  color: #FFFFFF;
+  width: 500rem;
+}
+.section2 .container-mb .contact-wrap {
+  display: flex;
+  flex-direction: row;
+  width: 57%;
+  margin: 120rem auto 0;
+  gap: 30rem;
+}
+.section2 .container-mb .contact-wrap .contact {
+  position: relative;
+  background: url(../assets/contact/bg-info.png) top center no-repeat;
+  background-size: 100%;
+  width: 330rem;
+  height: 330rem;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  padding-top: 50rem;
+  align-items: center;
+}
+.section2 .container-mb .contact-wrap .contact img {
+  position: relative;
+  width: 109rem;
+  height: 109rem;
+}
+.section2 .container-mb .contact-wrap .contact .content {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20rem;
+  align-items: center;
+}
+.section2 .container-mb .contact-wrap .contact .content .title {
+  position: relative;
+  font-family: 'roboto';
+  font-weight: bold;
+  font-style: normal;
+  font-size: 16rem;
+  color: #FFFFFF;
+  width: 300rem;
+  padding-left: 90rem;
+}
+.section2 .container-mb .contact-wrap .contact .content .text {
+  position: relative;
+  text-align: center;
+  font-family: 'roboto';
+  font-weight: lighter;
+  font-style: normal;
+  font-size: 16rem;
+  color: #FFFFFF;
+  width: 200rem;
+}
+.section2 .container-mb .contact-wrap .contact2 .title,
+.section2 .container-mb .contact-wrap .contact3 .title {
+  padding-left: 79rem !important;
+}
+.section2 .container-mb .info {
+  position: relative;
+  top: 150rem;
+  padding-left: 600rem;
+  display: block;
+}
+.section2 .container-mb .info .title-main {
+  position: relative;
+  top: -50rem;
+  padding-left: 220rem;
+  font-family: 'roboto';
+  font-weight: bold;
+  font-style: normal;
+  font-size: 48rem;
+  color: #FFFFFF;
+  width: 500rem;
+}
+.section2 .container-mb .info .title {
+  font-family: 'roboto';
+  font-weight: bold;
+  font-style: normal;
+  font-size: 16rem;
+  color: #FFFFFF;
+  width: 300rem;
+}
+.section2 .container-mb .info .text {
+  font-family: 'roboto';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 16rem;
+  color: #cfcdcd;
+  width: 300rem;
+}
+.section2 .container-mb .info .phone {
+  position: relative;
+  top: 0;
+  padding-left: 25rem;
+}
+.section2 .container-mb .info .phone img {
+  position: relative;
+  top: 20rem;
+  left: -25rem;
+  width: 18rem;
+  height: 18rem;
+}
+.section2 .container-mb .info .phone .text:hover {
+  color: #FFFFFF;
+  cursor: pointer;
+}
+.section2 .container-mb .info .telephone {
+  position: relative;
+  top: 0;
+  padding-left: 25rem;
+}
+.section2 .container-mb .info .telephone img {
+  position: relative;
+  top: 20rem;
+  left: -25rem;
+  width: 18rem;
+  height: 18rem;
+}
+.section2 .container-mb .info .telephone .text:hover {
+  color: #FFFFFF;
+  cursor: pointer;
+}
+.section2 .container-mb .info .mail {
+  position: relative;
+  top: 0;
+  padding-left: 25rem;
+}
+.section2 .container-mb .info .mail img {
+  position: relative;
+  top: 23rem;
+  left: -25rem;
+  width: 18rem;
+  height: 18rem;
+}
+.section2 .container-mb .info .mail .text:hover {
+  color: #FFFFFF;
+  cursor: pointer;
+}
+.section2 .container-mb .info img {
+  position: relative;
+  top: -170rem;
+  left: 220rem;
+  width: 454rem;
+  height: 163rem;
+}
+.section2 .container-mb .email-us {
+  position: relative;
+  top: 70rem;
+  padding-left: 500rem;
+  display: none;
+}
+.section2 .container-mb .email-us .title-main {
+  position: relative;
+  top: 0;
+  margin-left: 250rem;
+  font-family: 'roboto';
+  font-weight: bold;
+  font-style: normal;
+  font-size: 48rem;
+  color: #FFFFFF;
+  width: 500rem;
+}
+.section2 .container-mb .email-us form label {
+  position: relative;
+  top: 0;
+  left: 0;
+  font-family: 'roboto';
+  font-weight: bold;
+  font-style: normal;
+  font-size: 16rem;
+  color: #FFFFFF;
+  width: 500rem;
+}
+.section2 .container-mb .email-us form label.name {
+  position: relative;
+  top: 50rem;
+  left: 85rem;
+}
+.section2 .container-mb .email-us form label.email {
+  position: relative;
+  top: 80rem;
+  left: 85rem;
+}
+.section2 .container-mb .email-us form label.phone {
+  position: relative;
+  top: -15rem;
+  left: 455rem;
+}
+.section2 .container-mb .email-us form label.title {
+  position: relative;
+  top: 10rem;
+  left: 85rem;
+}
+.section2 .container-mb .email-us form label.text {
+  position: relative;
+  top: 40rem;
+  left: 85rem;
+}
+.section2 .container-mb .email-us form input {
+  display: block;
+  width: 727rem;
+  box-shadow: none;
+  outline: none !important;
+  height: 50rem;
+  padding: 0 20rem;
+  margin-bottom: 19rem;
+  border-radius: 6px;
+  font-family: 'roboto';
+  font-weight: lighter;
+  font-style: normal;
+  font-size: 16rem;
+  color: #181818fd;
+}
+.section2 .container-mb .email-us form input.email,
+.section2 .container-mb .email-us form input.phone {
+  width: 360rem;
+}
+.section2 .container-mb .email-us form input.phone {
+  position: relative;
+  top: -8rem;
+  margin-left: 450rem;
+}
+.section2 .container-mb .email-us form input.name {
+  position: relative;
+  top: 56rem;
+  margin-left: 85rem;
+}
+.section2 .container-mb .email-us form input.email {
+  position: relative;
+  top: 86rem;
+  margin-left: 85rem;
+}
+.section2 .container-mb .email-us form input.title {
+  position: relative;
+  top: 15rem;
+  margin-left: 85rem;
+}
+.section2 .container-mb .email-us form textarea {
+  display: block;
+  width: 727rem;
+  height: 190rem;
+  border-radius: 6px;
+  font-family: 'roboto';
+  font-weight: lighter;
+  font-style: normal;
+  font-size: 16rem;
+  color: #181818fd;
+}
+.section2 .container-mb .email-us form textarea.text {
+  position: relative;
+  top: 50rem;
+  margin-left: 85rem;
+}
+.section2 .container-mb .email-us form .btn {
+  position: relative;
+  top: 90rem;
+  margin-left: 300rem;
+  display: block;
+  background: url(../assets/contact/bg-btn.png) top center no-repeat;
+  background-size: 100%;
+  width: 250rem;
+  height: 50rem;
+}
+.section2 .container-mb .email-us form .btn a {
+  position: relative;
+  top: 8rem;
+  left: 0;
+  display: block;
+  font-family: 'roboto';
+  font-weight: bold;
+  font-style: normal;
+  font-size: 24rem;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+@media (max-width: 1024px) {
+  .section2 .container {
+    display: none;
+  }
+  .section2 .container-mb {
+    display: block;
+    height: 2400rem;
+  }
+  .section2 .container-mb .content-up {
+    top: 140rem;
+    padding-left: 383rem;
+  }
+  .section2 .container-mb .content-up .title-up {
+    font-size: 60rem;
+    width: 600rem;
+  }
+  .section2 .container-mb .contact-wrap {
+    display: flex;
+    flex-direction: column;
+    width: 23%;
+    margin: 340rem auto 0;
+    gap: 80rem;
+  }
+  .section2 .container-mb .contact-wrap .contact {
+    width: 430rem;
+    height: 430rem;
+    padding-top: 50rem;
+  }
+  .section2 .container-mb .contact-wrap .contact img {
+    width: 139rem;
+    height: 139rem;
+  }
+  .section2 .container-mb .contact-wrap .contact .content {
+    margin-top: 20rem;
+    align-items: center;
+  }
+  .section2 .container-mb .contact-wrap .contact .content .title {
+    font-size: 30rem;
+    width: 350rem;
+    padding-left: 62rem;
+  }
+  .section2 .container-mb .contact-wrap .contact .content .text {
+    font-size: 30rem;
+    width: 310rem;
+  }
+  .section2 .container-mb .contact-wrap .contact2 .title,
+  .section2 .container-mb .contact-wrap .contact3 .title {
+    padding-left: 54rem !important;
+  }
+  .section2 .container-mb .info {
+    top: 250rem;
+    padding-left: 355rem;
+  }
+  .section2 .container-mb .info .title-main {
+    top: -50rem;
+    margin-left: 394rem;
+    font-size: 60rem;
+    width: 600rem;
+    padding-left: 0;
+  }
+  .section2 .container-mb .info .title {
+    font-size: 30rem;
+    width: 300rem;
+  }
+  .section2 .container-mb .info .text {
+    font-size: 30rem;
+    width: 300rem;
+  }
+  .section2 .container-mb .info .phone {
+    padding-left: 25rem;
+  }
+  .section2 .container-mb .info .phone img {
+    top: 35rem;
+    left: -25rem;
+    width: 30rem;
+    height: 30rem;
+  }
+  .section2 .container-mb .info .phone .text {
+    padding-left: 30rem;
+  }
+  .section2 .container-mb .info .telephone {
+    padding-left: 25rem;
+  }
+  .section2 .container-mb .info .telephone img {
+    top: 35rem;
+    left: -25rem;
+    width: 30rem;
+    height: 30rem;
+  }
+  .section2 .container-mb .info .telephone .text {
+    padding-left: 30rem;
+  }
+  .section2 .container-mb .info .mail {
+    padding-left: 25rem;
+  }
+  .section2 .container-mb .info .mail img {
+    top: 35rem;
+    left: -25rem;
+    width: 30rem;
+    height: 30rem;
+  }
+  .section2 .container-mb .info .mail .text {
+    padding-left: 30rem;
+  }
+  .section2 .container-mb .info img {
+    top: -300rem;
+    left: 400rem;
+    width: 783rem;
+    height: 290rem;
+  }
+  .section2 .container-mb .email-us {
+    top: 250rem;
+    padding-left: 400rem;
+    display: none;
+  }
+  .section2 .container-mb .email-us .title-main {
+    margin-left: 275rem;
+    font-size: 60rem;
+    width: 600rem;
+  }
+  .section2 .container-mb .email-us form label {
+    font-size: 30rem;
+    width: 500rem;
+  }
+  .section2 .container-mb .email-us form label.name {
+    top: 50rem;
+    left: 85rem;
+  }
+  .section2 .container-mb .email-us form label.email {
+    top: 80rem;
+    left: 85rem;
+  }
+  .section2 .container-mb .email-us form label.phone {
+    top: -48rem;
+    left: 568rem;
+  }
+  .section2 .container-mb .email-us form label.title {
+    top: 10rem;
+    left: 85rem;
+  }
+  .section2 .container-mb .email-us form label.text {
+    top: 40rem;
+    left: 85rem;
+  }
+  .section2 .container-mb .email-us form input {
+    display: block;
+    width: 940rem;
+    height: 65rem;
+    padding: 0 20rem;
+    margin-bottom: 19rem;
+    font-size: 30rem;
+  }
+  .section2 .container-mb .email-us form input.email,
+  .section2 .container-mb .email-us form input.phone {
+    width: 470rem;
+  }
+  .section2 .container-mb .email-us form input.phone {
+    top: -44rem;
+    margin-left: 564rem;
+  }
+  .section2 .container-mb .email-us form input.name {
+    top: 56rem;
+    margin-left: 85rem;
+  }
+  .section2 .container-mb .email-us form input.email {
+    top: 86rem;
+    margin-left: 85rem;
+  }
+  .section2 .container-mb .email-us form input.title {
+    top: 15rem;
+    margin-left: 85rem;
+  }
+  .section2 .container-mb .email-us form textarea {
+    display: block;
+    width: 940rem;
+    height: 235rem;
+    font-size: 30rem;
+  }
+  .section2 .container-mb .email-us form textarea.text {
+    top: 50rem;
+    margin-left: 85rem;
+  }
+  .section2 .container-mb .email-us form .btn {
+    top: 90rem;
+    margin-left: 355rem;
+    width: 300rem;
+    height: 60rem;
+  }
+  .section2 .container-mb .email-us form .btn a {
+    top: 2rem;
+    left: 0;
+    font-size: 40rem;
+  }
+}
+@media (max-width: 768px) {
+  .section2 .container-mb {
+    height: 3000rem;
+  }
+  .section2 .container-mb .content-up {
+    top: 80rem;
+    padding-left: 383rem;
+  }
+  .section2 .container-mb .content-up .title-up {
+    font-size: 65rem;
+    width: 800rem;
+  }
+  .section2 .container-mb .contact-wrap {
+    display: flex;
+    flex-direction: column;
+    width: 28%;
+    margin: 160rem auto 0;
+    gap: 50rem;
+  }
+  .section2 .container-mb .contact-wrap .contact {
+    width: 550rem;
+    height: 550rem;
+    padding-top: 50rem;
+  }
+  .section2 .container-mb .contact-wrap .contact img {
+    width: 159rem;
+    height: 159rem;
+  }
+  .section2 .container-mb .contact-wrap .contact .content {
+    margin-top: 20rem;
+    align-items: center;
+  }
+  .section2 .container-mb .contact-wrap .contact .content .title {
+    font-size: 40rem;
+    width: 410rem;
+    padding-left: 62rem;
+  }
+  .section2 .container-mb .contact-wrap .contact .content .text {
+    font-size: 40rem;
+    width: 440rem;
+  }
+  .section2 .container-mb .contact-wrap .contact2 .title,
+  .section2 .container-mb .contact-wrap .contact3 .title {
+    padding-left: 41rem !important;
+  }
+  .section2 .container-mb .info {
+    top: 200rem;
+    padding-left: 300rem;
+  }
+  .section2 .container-mb .info .title-main {
+    top: -50rem;
+    padding-left: 0;
+    font-size: 65rem;
+    width: 600rem;
+    margin-left: 440rem;
+  }
+  .section2 .container-mb .info .title {
+    font-size: 40rem;
+    width: 400rem;
+  }
+  .section2 .container-mb .info .text {
+    font-size: 40rem;
+    width: 500rem;
+  }
+  .section2 .container-mb .info .phone {
+    padding-left: 25rem;
+  }
+  .section2 .container-mb .info .phone img {
+    top: 46rem;
+    left: -25rem;
+    width: 40rem;
+    height: 40rem;
+  }
+  .section2 .container-mb .info .phone .text {
+    padding-left: 30rem;
+  }
+  .section2 .container-mb .info .telephone {
+    padding-left: 25rem;
+  }
+  .section2 .container-mb .info .telephone img {
+    top: 46rem;
+    left: -25rem;
+    width: 40rem;
+    height: 40rem;
+  }
+  .section2 .container-mb .info .telephone .text {
+    padding-left: 30rem;
+  }
+  .section2 .container-mb .info .mail {
+    padding-left: 25rem;
+  }
+  .section2 .container-mb .info .mail img {
+    top: 46rem;
+    left: -25rem;
+    width: 40rem;
+    height: 40rem;
+  }
+  .section2 .container-mb .info .mail .text {
+    padding-left: 30rem;
+  }
+  .section2 .container-mb .info img {
+    top: -355rem;
+    left: 460rem;
+    width: 945rem;
+    height: 350rem;
+  }
+  .section2 .container-mb .email-us {
+    top: 200rem;
+    padding-left: 300rem;
+    display: none;
+  }
+  .section2 .container-mb .email-us .title-main {
+    margin-left: 359rem;
+    font-size: 65rem;
+    width: 800rem;
+  }
+  .section2 .container-mb .email-us form label {
+    font-size: 40rem;
+    width: 500rem;
+  }
+  .section2 .container-mb .email-us form label.name {
+    top: 50rem;
+    left: 85rem;
+  }
+  .section2 .container-mb .email-us form label.email {
+    top: 80rem;
+    left: 85rem;
+  }
+  .section2 .container-mb .email-us form label.phone {
+    top: -80rem;
+    left: 700rem;
+  }
+  .section2 .container-mb .email-us form label.title {
+    top: -60rem;
+    left: 85rem;
+  }
+  .section2 .container-mb .email-us form label.text {
+    top: -20rem;
+    left: 85rem;
+  }
+  .section2 .container-mb .email-us form input {
+    display: block;
+    width: 1200rem;
+    height: 83.3rem;
+    padding: 0 20rem;
+    margin-bottom: 19rem;
+    font-size: 40rem;
+  }
+  .section2 .container-mb .email-us form input.email,
+  .section2 .container-mb .email-us form input.phone {
+    width: 580rem;
+  }
+  .section2 .container-mb .email-us form input.phone {
+    top: -78rem;
+    margin-left: 695rem;
+  }
+  .section2 .container-mb .email-us form input.name {
+    top: 56rem;
+    margin-left: 85rem;
+  }
+  .section2 .container-mb .email-us form input.email {
+    top: 86rem;
+    margin-left: 85rem;
+  }
+  .section2 .container-mb .email-us form input.title {
+    top: -40rem;
+    margin-left: 85rem;
+  }
+  .section2 .container-mb .email-us form textarea {
+    display: block;
+    width: 1200rem;
+    height: 300rem;
+    font-size: 40rem;
+  }
+  .section2 .container-mb .email-us form textarea.text {
+    top: 20rem;
+    margin-left: 85rem;
+  }
+  .section2 .container-mb .email-us form .btn {
+    top: 90rem;
+    margin-left: 430rem;
+    width: 400rem;
+    height: 80rem;
+  }
+  .section2 .container-mb .email-us form .btn a {
+    top: 8rem;
+    left: 0;
+    font-size: 45rem;
+  }
+}
+@media (max-width: 540px) {
+  .section2 .container {
+    display: none;
+  }
+  .section2 .container-mb {
+    display: block;
+    height: 2400rem;
+  }
+  .section2 .container-mb .content-up {
+    top: 80rem;
+    padding-left: 383rem;
+  }
+  .section2 .container-mb .content-up .title-up {
+    font-size: 70rem;
+    width: 900rem;
+  }
+  .section2 .container-mb .contact-wrap {
+    display: flex;
+    flex-direction: column;
+    width: 31%;
+    margin: 160rem auto 0;
+    gap: 50rem;
+  }
+  .section2 .container-mb .contact-wrap .contact {
+    width: 600rem;
+    height: 600rem;
+    padding-top: 50rem;
+  }
+  .section2 .container-mb .contact-wrap .contact img {
+    width: 180rem;
+    height: 180rem;
+  }
+  .section2 .container-mb .contact-wrap .contact .content {
+    margin-top: 20rem;
+    align-items: center;
+  }
+  .section2 .container-mb .contact-wrap .contact .content .title {
+    font-size: 45rem;
+    width: 455rem;
+    padding-left: 62rem;
+  }
+  .section2 .container-mb .contact-wrap .contact .content .text {
+    font-size: 45rem;
+    width: 465rem;
+  }
+  .section2 .container-mb .contact-wrap .contact2 .title,
+  .section2 .container-mb .contact-wrap .contact3 .title {
+    padding-left: 54rem !important;
+  }
+  .section2 .container-mb .info {
+    top: 150rem;
+    padding-left: 180rem;
+  }
+  .section2 .container-mb .info .title-main {
+    top: -50rem;
+    padding-left: 0;
+    font-size: 70rem;
+    width: 600rem;
+    margin-left: 540rem;
+  }
+  .section2 .container-mb .info .title {
+    font-size: 45rem;
+    width: 300rem;
+  }
+  .section2 .container-mb .info .text {
+    font-size: 45rem;
+    width: 600rem;
+  }
+  .section2 .container-mb .info .phone {
+    padding-left: 25rem;
+  }
+  .section2 .container-mb .info .phone img {
+    top: 57rem;
+    left: -25rem;
+    width: 50rem;
+    height: 50rem;
+  }
+  .section2 .container-mb .info .phone .text {
+    padding-left: 60rem;
+  }
+  .section2 .container-mb .info .telephone {
+    padding-left: 25rem;
+  }
+  .section2 .container-mb .info .telephone img {
+    top: 57rem;
+    left: -25rem;
+    width: 50rem;
+    height: 50rem;
+  }
+  .section2 .container-mb .info .telephone .text {
+    padding-left: 60rem;
+  }
+  .section2 .container-mb .info .mail {
+    padding-left: 25rem;
+  }
+  .section2 .container-mb .info .mail img {
+    top: 57rem;
+    left: -25rem;
+    width: 50rem;
+    height: 50rem;
+  }
+  .section2 .container-mb .info .mail .text {
+    padding-left: 60rem;
+  }
+  .section2 .container-mb .info img {
+    top: -400rem;
+    left: 540rem;
+    width: 1026rem;
+    height: 380rem;
+  }
+  .section2 .container-mb .email-us {
+    top: 70rem;
+    padding-left: 200rem;
+    display: none;
+  }
+  .section2 .container-mb .email-us .title-main {
+    margin-left: 430rem;
+    font-size: 70rem;
+    width: 800rem;
+  }
+  .section2 .container-mb .email-us form label {
+    font-size: 45rem;
+    width: 500rem;
+  }
+  .section2 .container-mb .email-us form label.name {
+    top: 50rem;
+    left: 85rem;
+  }
+  .section2 .container-mb .email-us form label.email {
+    top: 80rem;
+    left: 85rem;
+  }
+  .section2 .container-mb .email-us form label.phone {
+    top: -100rem;
+    left: 800rem;
+  }
+  .section2 .container-mb .email-us form label.title {
+    top: -60rem;
+    left: 85rem;
+  }
+  .section2 .container-mb .email-us form label.text {
+    top: -20rem;
+    left: 85rem;
+  }
+  .section2 .container-mb .email-us form input {
+    display: block;
+    width: 1400rem;
+    height: 97.2rem;
+    padding: 0 20rem;
+    margin-bottom: 19rem;
+    font-size: 45rem;
+  }
+  .section2 .container-mb .email-us form input.email,
+  .section2 .container-mb .email-us form input.phone {
+    width: 680rem;
+  }
+  .section2 .container-mb .email-us form input.phone {
+    top: -95rem;
+    margin-left: 795rem;
+  }
+  .section2 .container-mb .email-us form input.name {
+    top: 56rem;
+    margin-left: 85rem;
+  }
+  .section2 .container-mb .email-us form input.email {
+    top: 86rem;
+    margin-left: 85rem;
+  }
+  .section2 .container-mb .email-us form input.title {
+    top: -40rem;
+    margin-left: 85rem;
+  }
+  .section2 .container-mb .email-us form textarea {
+    display: block;
+    width: 1400rem;
+    height: 350rem;
+    font-size: 45rem;
+  }
+  .section2 .container-mb .email-us form textarea.text {
+    top: 20rem;
+    margin-left: 85rem;
+  }
+  .section2 .container-mb .email-us form .btn {
+    top: 90rem;
+    margin-left: 540rem;
+    width: 400rem;
+    height: 80rem;
+  }
+  .section2 .container-mb .email-us form .btn a {
+    top: 8rem;
+    left: 0;
+    font-size: 50rem;
+  }
 }
 .section9 {
   position: relative;
@@ -469,6 +1443,9 @@ section {
   color: #FFFFFF;
   width: 200rem;
 }
+.section9 .container .row .col:nth-of-type(2) {
+  padding-left: 30rem;
+}
 .section9 .copy-right {
   position: relative;
   top: 166rem;
@@ -479,4 +1456,142 @@ section {
   font-size: 16rem;
   color: #FFFFFF;
   width: 500rem;
+}
+@media (max-width: 1024px) {
+  .section9 {
+    background: #000000;
+    height: 600rem;
+  }
+  .section9 .container {
+    width: 80%;
+    padding-top: 150rem;
+  }
+  .section9 .container .row .col .content-inner {
+    top: 40rem;
+    left: 0;
+  }
+  .section9 .container .row .col .content-inner p {
+    font-size: 28rem;
+    width: 500rem;
+  }
+  .section9 .container .row .col .email {
+    top: 30rem;
+    left: 53rem;
+    border-radius: 25px;
+  }
+  .section9 .container .row .col .email input {
+    width: 350rem;
+    height: 60rem;
+    font-size: 28rem;
+    outline: none !important;
+  }
+  .section9 .container .row .col .email input::placeholder {
+    font-size: 28rem;
+  }
+  .section9 .container .row .col .sign {
+    top: 90rem;
+    left: 113rem;
+    width: 343rem;
+    height: 51rem;
+  }
+  .section9 .container .row .col .sign a {
+    font-size: 28rem;
+  }
+  .section9 .copy-right {
+    top: 70rem;
+    left: 195rem;
+    font-size: 28rem;
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .section9 {
+    height: 600rem;
+  }
+  .section9 .container {
+    width: 80%;
+    padding-top: 150rem;
+  }
+  .section9 .container .row .col .content-inner {
+    top: 40rem;
+    left: 0;
+  }
+  .section9 .container .row .col .content-inner p {
+    font-size: 30rem;
+    width: 430rem;
+  }
+  .section9 .container .row .col .email {
+    top: 30rem;
+    left: 53rem;
+    border-radius: 25px;
+  }
+  .section9 .container .row .col .email input {
+    width: 350rem;
+    height: 60rem;
+    font-size: 30rem;
+  }
+  .section9 .container .row .col .email input::placeholder {
+    font-size: 30rem;
+  }
+  .section9 .container .row .col .sign {
+    top: 90rem;
+    left: 113rem;
+    width: 343rem;
+    height: 51rem;
+  }
+  .section9 .container .row .col .sign a {
+    font-size: 30rem;
+  }
+  .section9 .copy-right {
+    top: 70rem;
+    left: 195rem;
+    font-size: 30rem;
+    width: 100%;
+  }
+}
+@media (max-width: 540px) {
+  .section9 {
+    height: 800rem;
+  }
+  .section9 .container {
+    width: 80%;
+  }
+  .section9 .container .row .col .content-inner {
+    top: 40rem;
+    left: 0;
+  }
+  .section9 .container .row .col .content-inner p {
+    font-size: 45rem;
+    width: 500rem;
+  }
+  .section9 .container .row .col .email {
+    top: 30rem;
+    left: 53rem;
+    border-radius: 25px;
+  }
+  .section9 .container .row .col .email input {
+    width: 460rem;
+    height: 92rem;
+    font-size: 45rem;
+  }
+  .section9 .container .row .col .email input::placeholder {
+    font-size: 45rem;
+    padding: 0 30rem;
+  }
+  .section9 .container .row .col .sign {
+    top: 90rem;
+    left: 113rem;
+    width: 460rem;
+    height: 68rem;
+  }
+  .section9 .container .row .col .sign a {
+    left: 32%;
+    font-size: 45rem;
+  }
+  .section9 .copy-right {
+    top: 70rem;
+    left: 195rem;
+    font-size: 45rem;
+    width: 100%;
+  }
 }

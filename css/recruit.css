@@ -466,26 +466,26 @@ section {
     position: relative;
     background: url(../assets/hr/hot-btn.png) top center no-repeat;
     background-size: 100%;
-    width: 71rem;
-    height: 30rem;
-    top: -590rem;
+    width: 110rem;
+    height: 49rem;
+    top: -616rem;
     left: 10rem;
   }
   .section2 .container-wrap .container .row .col .hot img {
     position: relative;
     top: 4rem;
     left: 10rem;
-    width: 13rem;
-    height: 19rem;
+    width: 32rem;
+    height: 35rem;
   }
   .section2 .container-wrap .container .row .col .hot p {
     position: relative;
-    top: -15rem;
-    left: 30rem;
+    top: -30rem;
+    left: 47rem;
     font-family: 'roboto';
     font-weight: normal;
     font-style: normal;
-    font-size: 16rem;
+    font-size: 27rem;
     color: #FFFFFF;
     width: 360rem;
   }
@@ -546,6 +546,350 @@ section {
   .section2 .container-wrap .container1 .row .col:nth-of-type(4) {
     position: relative;
     top: 320rem;
+    left: 10rem;
+  }
+}
+@media (max-width: 768px) {
+  .section2 {
+    height: 3550rem;
+  }
+  .section2 .content-up {
+    top: 80rem;
+    padding-left: 200rem;
+  }
+  .section2 .content-up .title-up {
+    font-size: 65rem;
+    width: 650rem;
+  }
+  .section2 .container-wrap {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 150rem;
+  }
+  .section2 .container-wrap .container {
+    position: relative;
+  }
+  .section2 .container-wrap .container .row .col {
+    height: 570rem;
+    z-index: 1;
+  }
+  .section2 .container-wrap .container .row .col .icon {
+    position: relative;
+    cursor: pointer;
+  }
+  .section2 .container-wrap .container .row .col .icon img {
+    width: 200rem;
+    height: 200rem;
+  }
+  .section2 .container-wrap .container .row .col .content-inner {
+    position: relative;
+    top: -214rem;
+    left: 220rem;
+  }
+  .section2 .container-wrap .container .row .col .content-inner .title {
+    font-family: 'roboto';
+    font-weight: bold;
+    font-style: normal;
+    font-size: 40rem;
+    color: #FFFFFF;
+    width: 500rem;
+    cursor: pointer;
+  }
+  .section2 .container-wrap .container .row .col .content-inner .text {
+    font-family: 'roboto';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 30rem;
+    color: #FFFFFF;
+    width: 500rem;
+  }
+  .section2 .container-wrap .container .row .col .content-inner .head {
+    position: relative;
+    top: 15rem;
+    font-family: 'roboto';
+    font-weight: bold;
+    font-style: normal;
+    font-size: 34rem;
+    color: #FFFFFF;
+    width: 750rem;
+    line-height: 3;
+  }
+  .section2 .container-wrap .container .row .col .line {
+    position: relative;
+    top: -198rem;
+  }
+  .section2 .container-wrap .container .row .col .line img {
+    width: 700rem;
+    height: 4rem;
+  }
+  .section2 .container-wrap .container .row .col .bg {
+    position: relative;
+    height: 213rem;
+    top: -412rem;
+    z-index: -1;
+  }
+  .section2 .container-wrap .container .row .col .bg img {
+    width: 650rem;
+    height: 213rem;
+  }
+  .section2 .container-wrap .container .row .col .hot {
+    position: relative;
+    background: url(../assets/hr/hot-btn.png) top center no-repeat;
+    background-size: 100%;
+    width: 110rem;
+    height: 49rem;
+    top: -635rem;
+    left: 10rem;
+  }
+  .section2 .container-wrap .container .row .col .hot img {
+    position: relative;
+    top: 4rem;
+    left: 10rem;
+    width: 32rem;
+    height: 35rem;
+  }
+  .section2 .container-wrap .container .row .col .hot p {
+    position: relative;
+    top: -30rem;
+    left: 47rem;
+    font-family: 'roboto';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 27rem;
+    color: #FFFFFF;
+    width: 360rem;
+  }
+  .section2 .container-wrap .container .row .col:nth-of-type(1) {
+    height: 480rem;
+  }
+  .section2 .container-wrap .container1 {
+    position: relative;
+    left: 20rem;
+  }
+  .section2 .container-wrap .container1 .row .col {
+    height: 520rem;
+  }
+  .section2 .container-wrap .container1 .row .col .join {
+    position: relative;
+    background: url(../assets/hr/btn-signup.png) top center no-repeat;
+    background-size: 100%;
+    width: 750rem;
+    height: 80rem;
+    cursor: pointer;
+    text-align: center;
+  }
+  .section2 .container-wrap .container1 .row .col .join a {
+    position: relative;
+    top: 10rem;
+    font-family: 'roboto';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 40rem;
+    color: #FFFFFF;
+    width: 100%;
+    text-decoration: none;
+  }
+  .section2 .container-wrap .container1 .row .col .content-inner {
+    position: relative;
+    top: 0rem;
+    left: 0rem;
+  }
+  .section2 .container-wrap .container1 .row .col .content-inner ul li {
+    position: relative;
+    left: 30rem;
+    top: 20rem;
+  }
+  .section2 .container-wrap .container1 .row .col .content-inner .title {
+    width: 800rem;
+  }
+  .section2 .container-wrap .container1 .row .col .content-inner .text {
+    width: 700rem;
+  }
+  .section2 .container-wrap .container1 .row .col:nth-of-type(1) {
+    height: 130rem;
+  }
+  .section2 .container-wrap .container1 .row .col:nth-of-type(3) {
+    position: relative;
+    top: 80rem;
+    left: 10rem;
+  }
+  .section2 .container-wrap .container1 .row .col:nth-of-type(4) {
+    position: relative;
+    top: 340rem;
+    left: 10rem;
+  }
+}
+@media (max-width: 540px) {
+  .section2 {
+    height: 6700rem;
+  }
+  .section2 .content-up {
+    top: 80rem;
+    padding-left: 150rem;
+  }
+  .section2 .content-up .title-up {
+    font-size: 70rem;
+    width: 750rem;
+  }
+  .section2 .container-wrap {
+    display: flex;
+    flex-direction: row;
+    width: 85%;
+    margin: 0 auto;
+    padding-top: 150rem;
+  }
+  .section2 .container-wrap .container {
+    position: relative;
+  }
+  .section2 .container-wrap .container .row .col {
+    height: 1170rem;
+    z-index: 1;
+  }
+  .section2 .container-wrap .container .row .col .icon {
+    position: relative;
+    cursor: pointer;
+  }
+  .section2 .container-wrap .container .row .col .icon img {
+    width: 200rem;
+    height: 200rem;
+  }
+  .section2 .container-wrap .container .row .col .content-inner {
+    position: relative;
+    top: -214rem;
+    left: 220rem;
+  }
+  .section2 .container-wrap .container .row .col .content-inner .title {
+    font-family: 'roboto';
+    font-weight: bold;
+    font-style: normal;
+    font-size: 50rem;
+    color: #FFFFFF;
+    width: 500rem;
+    cursor: pointer;
+  }
+  .section2 .container-wrap .container .row .col .content-inner .text {
+    font-family: 'roboto';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 45rem;
+    color: #FFFFFF;
+    width: 500rem;
+  }
+  .section2 .container-wrap .container .row .col .content-inner .head {
+    position: relative;
+    top: 15rem;
+    font-family: 'roboto';
+    font-weight: bold;
+    font-style: normal;
+    font-size: 47rem;
+    color: #FFFFFF;
+    width: 750rem;
+    line-height: 3;
+  }
+  .section2 .container-wrap .container .row .col .line {
+    position: relative;
+    top: -198rem;
+  }
+  .section2 .container-wrap .container .row .col .line img {
+    width: 700rem;
+    height: 4rem;
+  }
+  .section2 .container-wrap .container .row .col .bg {
+    position: relative;
+    height: 213rem;
+    top: -412rem;
+    z-index: -1;
+  }
+  .section2 .container-wrap .container .row .col .bg img {
+    width: 650rem;
+    height: 213rem;
+  }
+  .section2 .container-wrap .container .row .col .hot {
+    position: relative;
+    background: url(../assets/hr/hot-btn.png) top center no-repeat;
+    background-size: 100%;
+    width: 137rem;
+    height: 60rem;
+    top: -1150rem;
+    left: 10rem;
+  }
+  .section2 .container-wrap .container .row .col .hot img {
+    position: relative;
+    top: 4rem;
+    left: 10rem;
+    width: 35rem;
+    height: 44rem;
+  }
+  .section2 .container-wrap .container .row .col .hot p {
+    position: relative;
+    top: -41rem;
+    left: 58rem;
+    font-family: 'roboto';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 35rem;
+    color: #FFFFFF;
+    width: 360rem;
+  }
+  .section2 .container-wrap .container .row .col:nth-of-type(1) {
+    height: 1020rem;
+  }
+  .section2 .container-wrap .container1 {
+    position: relative;
+    left: 20rem;
+  }
+  .section2 .container-wrap .container1 .row .col {
+    height: 1000rem;
+  }
+  .section2 .container-wrap .container1 .row .col .join {
+    position: relative;
+    background: url(../assets/hr/btn-signup.png) top center no-repeat;
+    background-size: 100%;
+    width: 750rem;
+    height: 80rem;
+    cursor: pointer;
+    text-align: center;
+  }
+  .section2 .container-wrap .container1 .row .col .join a {
+    position: relative;
+    top: 4rem;
+    font-family: 'roboto';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 50rem;
+    color: #FFFFFF;
+    width: 100%;
+    text-decoration: none;
+  }
+  .section2 .container-wrap .container1 .row .col .content-inner {
+    position: relative;
+    top: 0rem;
+    left: 0rem;
+  }
+  .section2 .container-wrap .container1 .row .col .content-inner ul li {
+    position: relative;
+    left: 30rem;
+    top: 20rem;
+  }
+  .section2 .container-wrap .container1 .row .col .content-inner .title {
+    width: 800rem;
+  }
+  .section2 .container-wrap .container1 .row .col .content-inner .text {
+    width: 700rem;
+  }
+  .section2 .container-wrap .container1 .row .col:nth-of-type(1) {
+    height: 130rem;
+  }
+  .section2 .container-wrap .container1 .row .col:nth-of-type(3) {
+    position: relative;
+    top: 80rem;
+    left: 10rem;
+  }
+  .section2 .container-wrap .container1 .row .col:nth-of-type(4) {
+    position: relative;
+    top: 650rem;
     left: 10rem;
   }
 }
